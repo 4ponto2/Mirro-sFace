@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:src="@drawable/olhos1"
+        android:src="@drawable/boca1"
         android:visibility="visible" />
     
 </RelativeLayout>    

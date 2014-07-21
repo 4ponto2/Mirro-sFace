@@ -203,7 +203,7 @@ public class CameraActivity extends Activity {
 		    	}
 		    	
 		    	layoutParams = getWindow().getAttributes();
-		    	layoutParams.screenBrightness = 0.2F;
+		    	layoutParams.screenBrightness = 0.18F;
 		    	getWindow().setAttributes(layoutParams);
 		    }		    
 		}
