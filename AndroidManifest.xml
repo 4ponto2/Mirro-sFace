@@ -38,7 +38,7 @@
         <activity
             android:name=".ShareActivity"
             android:label="@string/title_activity_share"
-            android:theme="@android:style/Theme.Black" >
+            android:theme="@android:style/Theme.DeviceDefault" >
         </activity>
     </application>
 

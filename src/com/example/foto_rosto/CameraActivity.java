@@ -9,23 +9,19 @@ import java.text.SimpleDateFormat;
 import android.app.Activity;
 import android.os.Bundle;
 import android.os.Environment;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.app.Activity;
 import android.content.Intent;
 import android.graphics.PixelFormat;
 import android.hardware.Camera;
 import android.hardware.Camera.PictureCallback;
 import android.hardware.Camera.ShutterCallback;
-import android.os.Bundle;
+import android.provider.Settings;
+import android.provider.Settings.SettingNotFoundException;
 import android.util.Log;
 import android.view.KeyEvent;
-import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.FrameLayout;
-import android.widget.TextView;
 
 public class CameraActivity extends Activity {
 
@@ -42,11 +38,20 @@ public class CameraActivity extends Activity {
 		public int w,h;       	
 	    
 	    public Button btnVoltar;
-		
 	    
+	    WindowManager.LayoutParams layoutParams;
+	    	    
+
 	    @Override
 	    public void onCreate(Bundle savedInstanceState) {
 		        super.onCreate(savedInstanceState);
+		        
+		        try {
+		        	toggleAutoBrightness();
+    		    } catch (SettingNotFoundException e) {
+    		        // TODO Auto-generated catch block
+    		        e.printStackTrace();
+    		    }
 		        
 		        getWindow().setFormat(PixelFormat.TRANSLUCENT);
 		        requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -84,12 +89,6 @@ public class CameraActivity extends Activity {
 		    		Log.d("FOTO", "onShutter'd");
 		    	}
 			};
-			
-//			PictureCallback rawCallback = new PictureCallback() {
-//				public void onPictureTaken(byte[] data, Camera camera) {
-//					Log.d("rawCallBack", "onPictureTaken - raw");
-//				}
-//			};	    
 			    
 			PictureCallback mPicture = new PictureCallback(){		
 				public void onPictureTaken(byte[] data, Camera camera) {
@@ -153,7 +152,6 @@ public class CameraActivity extends Activity {
 			        }
 			} 
 		    
-		    
 		    @Override
 		    public boolean dispatchKeyEvent(KeyEvent event) {
 		        int action = event.getAction();
@@ -194,5 +192,18 @@ public class CameraActivity extends Activity {
 		    	ShareActivity.putExtra("Foto_Local", local_foto);
 		        startActivity(ShareActivity);	        
 		    }		    
+		    
+		    private void toggleAutoBrightness() throws SettingNotFoundException {
 
+		    	int brightnessMode = Settings.System.getInt(getContentResolver(),
+		                Settings.System.SCREEN_BRIGHTNESS_MODE);
+		    	
+		    	if (brightnessMode == Settings.System.SCREEN_BRIGHTNESS_MODE_AUTOMATIC){
+		    		Settings.System.putInt(getContentResolver(), Settings.System.SCREEN_BRIGHTNESS_MODE, Settings.System.SCREEN_BRIGHTNESS_MODE_MANUAL);
+		    	}
+		    	
+		    	layoutParams = getWindow().getAttributes();
+		    	layoutParams.screenBrightness = 0.2F;
+		    	getWindow().setAttributes(layoutParams);
+		    }		    
 		}
