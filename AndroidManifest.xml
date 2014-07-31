@@ -40,6 +40,10 @@
             android:label="@string/title_activity_share"
             android:theme="@android:style/Theme.DeviceDefault" >
         </activity>
+        <activity
+            android:name=".OlhosActivity"
+            android:label="@string/title_activity_olhos" >
+        </activity>
     </application>
 
 </manifest>

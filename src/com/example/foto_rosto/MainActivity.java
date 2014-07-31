@@ -4,12 +4,13 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 import android.content.Intent;
 
 public class MainActivity extends Activity {
 
 		private boolean wasExecuted = false;
-	    private Intent mainActivity;
+	    private Intent olhosActivity, narizActivity, bocaActivity;
 	    
 		@Override
 		protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +21,10 @@ public class MainActivity extends Activity {
 		
 	    public void init()
 	    {
-	    	mainActivity = new Intent(getApplicationContext(), CameraActivity.class);
+//	    	mainActivity = new Intent(getApplicationContext(), CameraActivity.class);
+	    	olhosActivity = new Intent(getApplicationContext(), OlhosActivity.class);
+	    	narizActivity = new Intent(getApplicationContext(), CameraActivity.class);
+	    	bocaActivity = new Intent(getApplicationContext(), CameraActivity.class);
 	        wasExecuted = false;
 	    }
 
@@ -28,7 +32,33 @@ public class MainActivity extends Activity {
 	        
 	    	if(!wasExecuted){
 	    	    wasExecuted = true;
-	            startActivity(mainActivity);
+	    	    
+	    	    switch (view.getId()) {
+				case R.id.button1:
+					
+					startActivity(olhosActivity);
+					
+					break;
+					
+				case R.id.button2:
+					
+					startActivity(narizActivity);
+					
+					break;
+					
+				case R.id.button3:
+					
+					startActivity(bocaActivity);
+					
+					break;
+
+				default:
+					
+					Toast.makeText(getApplicationContext(), "Botão não funcionando!", Toast.LENGTH_SHORT).show();
+					
+					break;
+				}
+	            
 	        }
 	    }
 	    

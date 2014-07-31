@@ -6,5 +6,6 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_camera">CameraActivity</string>
     <string name="title_activity_share">Foto Face</string>
+    <string name="title_activity_olhos">OlhosActivity</string>
 
 </resources>
