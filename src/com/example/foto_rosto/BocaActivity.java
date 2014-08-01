@@ -5,82 +5,81 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class OlhosActivity extends Activity {
+public class BocaActivity extends Activity {
 
-	private int olho = 0;
-	private int rosto = 1;
+	private int boca = 0;
+	private int rosto = 3;
     private Intent cameraActivity;
+    
     
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_olhos);
-		
-		init();
+		setContentView(R.layout.activity_boca);
 	}
-	
+
 	private void init(){
 		
 		cameraActivity = new Intent(getApplicationContext(), CameraActivity.class);
 		
 	}
 	
-	public void selectOlhos(View view){
+	public void selectBoca(View view){
 		
 		switch (view.getId()) {
 		
-		case R.id.BtnOlhos1:
+		case R.id.BtnBoca1:
 			
-			olho = 1;
+			boca = 1;
 			mudatela();
 			
 			break;
 			
-		case R.id.BtnOlhos2:
+		case R.id.BtnBoca2:
 			
-			olho = 2;
+			boca = 2;
 			mudatela();
 				
 			break;
 			
-		case R.id.BtnOlhos3:
+		case R.id.BtnBoca3:
 			
-			olho = 3;
+			boca = 3;
 			mudatela();
 			
 			break;
 		
-		case R.id.BtnOlhos4:
+		case R.id.BtnBoca4:
 			
-			olho = 4;
+			boca = 4;
 			mudatela();
 			
 			break;
 		
-		case R.id.BtnOlhos5:
+		case R.id.BtnBoca5:
 			
-			olho = 5;
+			boca = 5;
 			mudatela();
 			
 			break;
 		
-		case R.id.BtnOlhos6:
+		case R.id.BtnBoca6:
 			
-			olho = 6;
+			boca = 6;
 			mudatela();
 			
 			break;
 		
-		case R.id.BtnOlhos7:
+		case R.id.BtnBoca7:
 			
-			olho = 7;
+			boca = 7;
 			mudatela();
 			
 			break;
 		
-		case R.id.BtnOlhos8:
+		case R.id.BtnBoca8:
 			
-			olho = 8;
+			boca = 8;
 			mudatela();
 			
 			break;
@@ -94,13 +93,13 @@ public class OlhosActivity extends Activity {
 	private void mudatela(){
 
 	    cameraActivity.putExtra("Rosto", rosto);
-    	cameraActivity.putExtra("img_n", olho);
+    	cameraActivity.putExtra("img_n", boca);
 		startActivity(cameraActivity);
 		
 	}
 	
     public void onBackPressed(){
-        OlhosActivity.this.finish();
+        BocaActivity.this.finish();
         android.os.Process.killProcess(android.os.Process.myPid());
         System.exit(0);
         getParent().finish();

@@ -23,8 +23,8 @@ public class MainActivity extends Activity {
 	    {
 //	    	mainActivity = new Intent(getApplicationContext(), CameraActivity.class);
 	    	olhosActivity = new Intent(getApplicationContext(), OlhosActivity.class);
-	    	narizActivity = new Intent(getApplicationContext(), CameraActivity.class);
-	    	bocaActivity = new Intent(getApplicationContext(), CameraActivity.class);
+	    	narizActivity = new Intent(getApplicationContext(), NarizActivity.class);
+	    	bocaActivity = new Intent(getApplicationContext(), BocaActivity.class);
 	        wasExecuted = false;
 	    }
 

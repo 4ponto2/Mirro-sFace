@@ -5,17 +5,15 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class OlhosActivity extends Activity {
+public class NarizActivity extends Activity {
 
-	private int olho = 0;
-	private int rosto = 1;
+	private int nariz = 0;
+	private int rosto = 2;
     private Intent cameraActivity;
-    
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_olhos);
-		
+		setContentView(R.layout.activity_nariz);
 		init();
 	}
 	
@@ -25,62 +23,62 @@ public class OlhosActivity extends Activity {
 		
 	}
 	
-	public void selectOlhos(View view){
+	public void selectNariz(View view){
 		
 		switch (view.getId()) {
 		
-		case R.id.BtnOlhos1:
+		case R.id.BtnNariz1:
 			
-			olho = 1;
+			nariz = 1;
 			mudatela();
 			
 			break;
 			
-		case R.id.BtnOlhos2:
+		case R.id.BtnNariz2:
 			
-			olho = 2;
+			nariz = 2;
 			mudatela();
 				
 			break;
 			
-		case R.id.BtnOlhos3:
+		case R.id.BtnNariz3:
 			
-			olho = 3;
+			nariz = 3;
 			mudatela();
 			
 			break;
 		
-		case R.id.BtnOlhos4:
+		case R.id.BtnNariz4:
 			
-			olho = 4;
+			nariz = 4;
 			mudatela();
 			
 			break;
 		
-		case R.id.BtnOlhos5:
+		case R.id.BtnNariz5:
 			
-			olho = 5;
+			nariz = 5;
 			mudatela();
 			
 			break;
 		
-		case R.id.BtnOlhos6:
+		case R.id.BtnNariz6:
 			
-			olho = 6;
+			nariz = 6;
 			mudatela();
 			
 			break;
 		
-		case R.id.BtnOlhos7:
+		case R.id.BtnNariz7:
 			
-			olho = 7;
+			nariz = 7;
 			mudatela();
 			
 			break;
 		
-		case R.id.BtnOlhos8:
+		case R.id.BtnNariz8:
 			
-			olho = 8;
+			nariz = 8;
 			mudatela();
 			
 			break;
@@ -94,16 +92,16 @@ public class OlhosActivity extends Activity {
 	private void mudatela(){
 
 	    cameraActivity.putExtra("Rosto", rosto);
-    	cameraActivity.putExtra("img_n", olho);
+    	cameraActivity.putExtra("img_n", nariz);
 		startActivity(cameraActivity);
 		
 	}
-	
+
     public void onBackPressed(){
-        OlhosActivity.this.finish();
+        NarizActivity.this.finish();
         android.os.Process.killProcess(android.os.Process.myPid());
         System.exit(0);
         getParent().finish();
     }
-
 }
+

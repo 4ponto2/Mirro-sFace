@@ -81,4 +81,11 @@ public class ShareActivity extends Activity {
 		}
 		return super.onOptionsItemSelected(item);
 	}
+	
+    public void onBackPressed(){
+        ShareActivity.this.finish();
+        android.os.Process.killProcess(android.os.Process.myPid());
+        System.exit(0);
+        getParent().finish();
+    }
 }

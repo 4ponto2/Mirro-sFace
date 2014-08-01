@@ -75,7 +75,7 @@
         				android:layout_centerHorizontal="true"
         				android:layout_marginBottom="22dp"
         				android:onClick="proxima"
-        				android:src="@drawable/olho" />
+        				android:src="@drawable/boca" />
                     
                 </TableRow>
                          

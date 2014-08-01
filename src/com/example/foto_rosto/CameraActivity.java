@@ -109,7 +109,6 @@ public class CameraActivity extends Activity {
 	    		Log.d("FOTO", "onShutter'd");
 	    	}
 		};
-			    
 			
 		PictureCallback mPicture = new PictureCallback(){
 			public void onPictureTaken(byte[] data, Camera camera) {
@@ -126,7 +125,6 @@ public class CameraActivity extends Activity {
 				}
 			}
 		};
-			
 		
 		public void salvafoto(byte[] data, Camera camera) {
 			File pictureFile = getOutputMediaFile();
@@ -215,13 +213,11 @@ public class CameraActivity extends Activity {
 		    return c;
 		    
 		}
-		    
 		
 		public void chamaShare(){
 			ShareActivity.putExtra("Foto_Local", local_foto);
 		    startActivity(ShareActivity);	        
 		}		    
-		    
 		
 		private void toggleAutoBrightness() throws SettingNotFoundException {
 
@@ -291,16 +287,101 @@ public class CameraActivity extends Activity {
 				
 			case 2:
 				
+				// ver qual imagem aparece 
+				switch (numerofoto) {
+				case 1:
+					img_rosto.setImageResource(R.drawable.nariz1);
+					break;
+					
+				case 2:
+					img_rosto.setImageResource(R.drawable.nariz2);
+					break;
+					
+				case 3:
+					img_rosto.setImageResource(R.drawable.nariz1);
+					break;
+					
+				case 4:
+					img_rosto.setImageResource(R.drawable.nariz1);
+					break;
+					
+				case 5:
+					img_rosto.setImageResource(R.drawable.nariz1);
+					break;
+					
+				case 6:
+					img_rosto.setImageResource(R.drawable.nariz1);
+					break;
+					
+				case 7:
+					img_rosto.setImageResource(R.drawable.nariz1);
+					break;
+					
+				case 8:
+					img_rosto.setImageResource(R.drawable.nariz1);
+					break;
+
+				default:
+					break;
+				}
+				
 				break;
 				
+		// BOCA
+				
 			case 3:
+				
+				// ver qual imagem aparece 
+				switch (numerofoto) {
+				case 1:
+					img_rosto.setImageResource(R.drawable.boca1);
+					break;
+					
+				case 2:
+					img_rosto.setImageResource(R.drawable.boca2);
+					break;
+					
+				case 3:
+					img_rosto.setImageResource(R.drawable.boca3);
+					break;
+					
+				case 4:
+					img_rosto.setImageResource(R.drawable.boca4);
+					break;
+					
+				case 5:
+					img_rosto.setImageResource(R.drawable.boca5);
+					break;
+					
+				case 6:
+					img_rosto.setImageResource(R.drawable.boca6);
+					break;
+					
+				case 7:
+					img_rosto.setImageResource(R.drawable.boca7);
+					break;
+					
+				case 8:
+					img_rosto.setImageResource(R.drawable.boca8);
+					break;
+
+				default:
+					break;
+				}				
 				
 				break;
 
 			default:
+				
 				break;
 			}
-			
-		}
+	}
+
+		    public void onBackPressed(){
+		        CameraActivity.this.finish();
+		        android.os.Process.killProcess(android.os.Process.myPid());
+		        System.exit(0);
+		        getParent().finish();
+		    }
 			
 	}

@@ -7,5 +7,7 @@
     <string name="title_activity_camera">CameraActivity</string>
     <string name="title_activity_share">Foto Face</string>
     <string name="title_activity_olhos">OlhosActivity</string>
+    <string name="title_activity_nariz">NarizActivity</string>
+    <string name="title_activity_boca">BocaActivity</string>
 
 </resources>
