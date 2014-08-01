@@ -36,13 +36,13 @@
                     
                     <!-- GRUPO 1 -->
 
-                    <ImageButton
+                    <Button
                         android:id="@+id/button1"
                         android:layout_width="332dp"
                         android:layout_height="214dp"
                         android:layout_marginBottom="22dp"
                         android:onClick="proxima"
-                        android:src="@drawable/olho" />
+                        android:background="@drawable/btn_olho_action" />
                     
                     </TableRow> 
 
@@ -51,15 +51,13 @@
                     android:layout_height="fill_parent"
                     android:layout_margin="1dp" >
                     
-    				<ImageButton
+    				<Button
         				android:id="@+id/button2"
         				android:layout_width="332dp"
         				android:layout_height="214dp"
-        				android:layout_alignBottom="@+id/button2"
-        				android:layout_centerHorizontal="true"
         				android:layout_marginBottom="22dp"
         				android:onClick="proxima"
-        				android:src="@drawable/nariz" />
+        				android:background="@drawable/btn_nariz_action" />
                     
                 </TableRow>
                 
@@ -67,15 +65,13 @@
                     android:layout_height="fill_parent"
                     android:layout_margin="1dp" >
                     
-    				<ImageButton
+    				<Button
         				android:id="@+id/button3"
         				android:layout_width="332dp"
         				android:layout_height="214dp"
-        				android:layout_alignBottom="@+id/button2"
-        				android:layout_centerHorizontal="true"
         				android:layout_marginBottom="22dp"
         				android:onClick="proxima"
-        				android:src="@drawable/boca" />
+        				android:background="@drawable/btn_boca_action" />
                     
                 </TableRow>
                          

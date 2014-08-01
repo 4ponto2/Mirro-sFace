@@ -10,14 +10,13 @@ public class BocaActivity extends Activity {
 	private int boca = 0;
 	private int rosto = 3;
     private Intent cameraActivity;
-    
-    
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_boca);
+		init();
 	}
-
+	
 	private void init(){
 		
 		cameraActivity = new Intent(getApplicationContext(), CameraActivity.class);
@@ -84,6 +83,13 @@ public class BocaActivity extends Activity {
 			
 			break;
 
+		case R.id.BtnBoca9:
+			
+			boca = 9;
+			mudatela();
+			
+			break;			
+
 		default:
 			break;
 		}
@@ -97,12 +103,12 @@ public class BocaActivity extends Activity {
 		startActivity(cameraActivity);
 		
 	}
-	
+
     public void onBackPressed(){
         BocaActivity.this.finish();
         android.os.Process.killProcess(android.os.Process.myPid());
         System.exit(0);
         getParent().finish();
     }
-
 }
+

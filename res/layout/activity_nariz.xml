@@ -30,7 +30,7 @@
                         android:layout_width="300dp"
                         android:layout_height="169dp"
                         android:onClick="selectNariz"
-                        android:background="@drawable/mini_nariz1"/>
+                        android:background="@drawable/btn_nariz1"/>
                     
                 </TableRow>                 
                 
@@ -43,7 +43,7 @@
                         android:layout_width="300dp"
                         android:layout_height="169dp"
                         android:onClick="selectNariz"
-                        android:background="@drawable/mini_nariz2"/>
+                        android:background="@drawable/btn_nariz2"/>
                     
                 </TableRow> 
                 
@@ -56,7 +56,7 @@
                         android:layout_width="300dp"
                         android:layout_height="169dp"
                         android:onClick="selectNariz"
-                        android:background="@drawable/mini_nariz1" />
+                        android:background="@drawable/btn_nariz3" />
                 </TableRow> 
                 
                 <TableRow
@@ -68,7 +68,7 @@
                         android:layout_width="300dp"
                         android:layout_height="169dp"
                         android:onClick="selectNariz"
-                        android:background="@drawable/mini_nariz1"/>
+                        android:background="@drawable/btn_nariz4"/>
                 </TableRow> 
                 
                 <TableRow
@@ -79,7 +79,7 @@
                         android:layout_width="300dp"
                         android:layout_height="169dp"
                         android:onClick="selectNariz"
-                        android:background="@drawable/mini_nariz1"/>
+                        android:background="@drawable/btn_nariz5"/>
                 </TableRow>
                 
                 <TableRow
@@ -90,7 +90,7 @@
                         android:layout_width="300dp"
                         android:layout_height="169dp"
                         android:onClick="selectNariz"
-                        android:background="@drawable/mini_nariz1"/>
+                        android:background="@drawable/btn_nariz6"/>
                 </TableRow> 
                 
                 <TableRow
@@ -101,7 +101,7 @@
                         android:layout_width="300dp"
                         android:layout_height="169dp"
                         android:onClick="selectNariz"
-                        android:background="@drawable/mini_nariz1"/>
+                        android:background="@drawable/btn_nariz7"/>
                 </TableRow>  
                 
                 <TableRow
@@ -112,8 +112,19 @@
                         android:layout_width="300dp"
                         android:layout_height="169dp"
                         android:onClick="selectNariz"
-                        android:background="@drawable/mini_nariz1"/>
-                </TableRow> 
+                        android:background="@drawable/btn_nariz8"/>
+                </TableRow>  
+                
+                <TableRow
+                    android:layout_height="fill_parent"
+                    android:layout_margin="1dp" >
+                    <Button
+                        android:id="@+id/BtnNariz9"
+                        android:layout_width="300dp"
+                        android:layout_height="169dp"
+                        android:onClick="selectNariz"
+                        android:background="@drawable/btn_nariz9"/>
+                </TableRow>  
                  
                                 
             </TableLayout>

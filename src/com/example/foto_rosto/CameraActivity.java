@@ -228,7 +228,7 @@ public class CameraActivity extends Activity {
 		    }
 		    	
 		    layoutParams = getWindow().getAttributes();
-		    layoutParams.screenBrightness = 0.18F;
+		    layoutParams.screenBrightness = 0.25F;
 		    getWindow().setAttributes(layoutParams);
 		    
 		}
@@ -275,6 +275,18 @@ public class CameraActivity extends Activity {
 				case 8:
 					img_rosto.setImageResource(R.drawable.olhos8);
 					break;
+					
+				case 9:
+					img_rosto.setImageResource(R.drawable.olho9);
+					break;
+					
+				case 10:
+					img_rosto.setImageResource(R.drawable.olho10);
+					break;
+					
+				case 11:
+					img_rosto.setImageResource(R.drawable.olho11);
+					break;
 
 				default:
 					break;
@@ -298,28 +310,32 @@ public class CameraActivity extends Activity {
 					break;
 					
 				case 3:
-					img_rosto.setImageResource(R.drawable.nariz1);
+					img_rosto.setImageResource(R.drawable.nariz3);
 					break;
 					
 				case 4:
-					img_rosto.setImageResource(R.drawable.nariz1);
+					img_rosto.setImageResource(R.drawable.nariz4);
 					break;
 					
 				case 5:
-					img_rosto.setImageResource(R.drawable.nariz1);
+					img_rosto.setImageResource(R.drawable.nariz5);
 					break;
 					
 				case 6:
-					img_rosto.setImageResource(R.drawable.nariz1);
+					img_rosto.setImageResource(R.drawable.nariz6);
 					break;
 					
 				case 7:
-					img_rosto.setImageResource(R.drawable.nariz1);
+					img_rosto.setImageResource(R.drawable.nariz7);
 					break;
 					
 				case 8:
-					img_rosto.setImageResource(R.drawable.nariz1);
+					img_rosto.setImageResource(R.drawable.nariz8);
 					break;
+
+				case 9:
+					img_rosto.setImageResource(R.drawable.nariz9);
+					break;					
 
 				default:
 					break;
@@ -363,6 +379,10 @@ public class CameraActivity extends Activity {
 					
 				case 8:
 					img_rosto.setImageResource(R.drawable.boca8);
+					break;
+					
+				case 9:
+					img_rosto.setImageResource(R.drawable.boca9);
 					break;
 
 				default:

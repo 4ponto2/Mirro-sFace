@@ -2,8 +2,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.foto_rosto.BocaActivity" 
+    tools:context=".BocaActivity" 
     android:background="@drawable/bg">
+
 
     <ScrollView
         android:id="@+id/VerticalScrollView1"
@@ -19,22 +20,20 @@
             
             <TableLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
+                android:layout_height="match_parent"> 
+                
                 <TableRow
                     android:layout_height="fill_parent"
                     android:layout_margin="1dp" >
                     
-                    <!-- GRUPO 1 -->
-
                     <Button
                         android:id="@+id/BtnBoca1"
                         android:layout_width="300dp"
                         android:layout_height="169dp"
                         android:onClick="selectBoca"
-                        android:background="@drawable/mini_boca1"/>
+                        android:background="@drawable/btn_boca1"/>
                     
-                    </TableRow> 
+                </TableRow>                 
                 
                 <TableRow
                     android:layout_height="fill_parent"
@@ -45,7 +44,7 @@
                         android:layout_width="300dp"
                         android:layout_height="169dp"
                         android:onClick="selectBoca"
-                        android:background="@drawable/mini_boca2"/>
+                        android:background="@drawable/btn_boca2"/>
                     
                 </TableRow> 
                 
@@ -58,7 +57,7 @@
                         android:layout_width="300dp"
                         android:layout_height="169dp"
                         android:onClick="selectBoca"
-                        android:background="@drawable/mini_boca3" />
+                        android:background="@drawable/btn_boca3" />
                 </TableRow> 
                 
                 <TableRow
@@ -70,7 +69,7 @@
                         android:layout_width="300dp"
                         android:layout_height="169dp"
                         android:onClick="selectBoca"
-                        android:background="@drawable/mini_boca4"/>
+                        android:background="@drawable/btn_boca4"/>
                 </TableRow> 
                 
                 <TableRow
@@ -81,7 +80,7 @@
                         android:layout_width="300dp"
                         android:layout_height="169dp"
                         android:onClick="selectBoca"
-                        android:background="@drawable/mini_boca5"/>
+                        android:background="@drawable/btn_boca5"/>
                 </TableRow>
                 
                 <TableRow
@@ -92,7 +91,7 @@
                         android:layout_width="300dp"
                         android:layout_height="169dp"
                         android:onClick="selectBoca"
-                        android:background="@drawable/mini_boca6"/>
+                        android:background="@drawable/btn_boca6"/>
                 </TableRow> 
                 
                 <TableRow
@@ -103,7 +102,7 @@
                         android:layout_width="300dp"
                         android:layout_height="169dp"
                         android:onClick="selectBoca"
-                        android:background="@drawable/mini_boca7"/>
+                        android:background="@drawable/btn_boca7"/>
                 </TableRow>  
                 
                 <TableRow
@@ -114,8 +113,19 @@
                         android:layout_width="300dp"
                         android:layout_height="169dp"
                         android:onClick="selectBoca"
-                        android:background="@drawable/mini_boca8"/>
-                </TableRow> 
+                        android:background="@drawable/btn_boca8"/>
+                </TableRow>  
+                
+                <TableRow
+                    android:layout_height="fill_parent"
+                    android:layout_margin="1dp" >
+                    <Button
+                        android:id="@+id/BtnBoca9"
+                        android:layout_width="300dp"
+                        android:layout_height="169dp"
+                        android:onClick="selectBoca"
+                        android:background="@drawable/btn_boca9"/>
+                </TableRow>  
                  
                                 
             </TableLayout>
@@ -123,4 +133,6 @@
     </ScrollView>
 
 </RelativeLayout>
+
+
 

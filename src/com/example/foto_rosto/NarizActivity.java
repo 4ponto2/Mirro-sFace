@@ -82,6 +82,13 @@ public class NarizActivity extends Activity {
 			mudatela();
 			
 			break;
+			
+		case R.id.BtnNariz9:
+			
+			nariz = 9;
+			mudatela();
+			
+			break;			
 
 		default:
 			break;
