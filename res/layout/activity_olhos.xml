@@ -148,7 +148,106 @@
                         android:layout_height="169dp"
                         android:onClick="selectOlhos"
                         android:background="@drawable/btn_olhos11"/>
-                </TableRow>  
+                </TableRow>   
+                
+                <TableRow
+                    android:layout_height="fill_parent"
+                    android:layout_margin="1dp" >
+                    <Button
+                        android:id="@+id/BtnOlhos12"
+                        android:layout_width="300dp"
+                        android:layout_height="169dp"
+                        android:onClick="selectOlhos"
+                        android:background="@drawable/btn_olhos12"/>
+                </TableRow>     
+                
+                <TableRow
+                    android:layout_height="fill_parent"
+                    android:layout_margin="1dp" >
+                    <Button
+                        android:id="@+id/BtnOlhos13"
+                        android:layout_width="300dp"
+                        android:layout_height="169dp"
+                        android:onClick="selectOlhos"
+                        android:background="@drawable/btn_olhos13"/>
+                </TableRow>     
+                
+                <TableRow
+                    android:layout_height="fill_parent"
+                    android:layout_margin="1dp" >
+                    <Button
+                        android:id="@+id/BtnOlhos14"
+                        android:layout_width="300dp"
+                        android:layout_height="169dp"
+                        android:onClick="selectOlhos"
+                        android:background="@drawable/btn_olhos14"/>
+                </TableRow>     
+                
+                <TableRow
+                    android:layout_height="fill_parent"
+                    android:layout_margin="1dp" >
+                    <Button
+                        android:id="@+id/BtnOlhos15"
+                        android:layout_width="300dp"
+                        android:layout_height="169dp"
+                        android:onClick="selectOlhos"
+                        android:background="@drawable/btn_olhos15"/>
+                </TableRow>     
+                
+                <TableRow
+                    android:layout_height="fill_parent"
+                    android:layout_margin="1dp" >
+                    <Button
+                        android:id="@+id/BtnOlhos16"
+                        android:layout_width="300dp"
+                        android:layout_height="169dp"
+                        android:onClick="selectOlhos"
+                        android:background="@drawable/btn_olhos16"/>
+                </TableRow>     
+                
+                <TableRow
+                    android:layout_height="fill_parent"
+                    android:layout_margin="1dp" >
+                    <Button
+                        android:id="@+id/BtnOlhos17"
+                        android:layout_width="300dp"
+                        android:layout_height="169dp"
+                        android:onClick="selectOlhos"
+                        android:background="@drawable/btn_olhos17"/>
+                </TableRow>     
+                
+                <TableRow
+                    android:layout_height="fill_parent"
+                    android:layout_margin="1dp" >
+                    <Button
+                        android:id="@+id/BtnOlhos18"
+                        android:layout_width="300dp"
+                        android:layout_height="169dp"
+                        android:onClick="selectOlhos"
+                        android:background="@drawable/btn_olhos18"/>
+                </TableRow>     
+                
+                <TableRow
+                    android:layout_height="fill_parent"
+                    android:layout_margin="1dp" >
+                    <Button
+                        android:id="@+id/BtnOlhos19"
+                        android:layout_width="300dp"
+                        android:layout_height="169dp"
+                        android:onClick="selectOlhos"
+                        android:background="@drawable/btn_olhos19"/>
+                </TableRow>     
+                
+                <TableRow
+                    android:layout_height="fill_parent"
+                    android:layout_margin="1dp" >
+                    <Button
+                        android:id="@+id/BtnOlhos20"
+                        android:layout_width="300dp"
+                        android:layout_height="169dp"
+                        android:onClick="selectOlhos"
+                        android:background="@drawable/btn_olhos20"/>
+                </TableRow>    
                  
                                 
             </TableLayout>

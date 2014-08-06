@@ -126,6 +126,127 @@
                         android:onClick="selectBoca"
                         android:background="@drawable/btn_boca9"/>
                 </TableRow>  
+                
+                <TableRow
+                    android:layout_height="fill_parent"
+                    android:layout_margin="1dp" >
+                    <Button
+                        android:id="@+id/BtnBoca10"
+                        android:layout_width="300dp"
+                        android:layout_height="169dp"
+                        android:onClick="selectBoca"
+                        android:background="@drawable/btn_boca10"/>
+                </TableRow>   
+                
+                <TableRow
+                    android:layout_height="fill_parent"
+                    android:layout_margin="1dp" >
+                    <Button
+                        android:id="@+id/BtnBoca11"
+                        android:layout_width="300dp"
+                        android:layout_height="169dp"
+                        android:onClick="selectBoca"
+                        android:background="@drawable/btn_boca11"/>
+                </TableRow>   
+                
+                <TableRow
+                    android:layout_height="fill_parent"
+                    android:layout_margin="1dp" >
+                    <Button
+                        android:id="@+id/BtnBoca12"
+                        android:layout_width="300dp"
+                        android:layout_height="169dp"
+                        android:onClick="selectBoca"
+                        android:background="@drawable/btn_boca12"/>
+                </TableRow>   
+                
+                <TableRow
+                    android:layout_height="fill_parent"
+                    android:layout_margin="1dp" >
+                    <Button
+                        android:id="@+id/BtnBoca13"
+                        android:layout_width="300dp"
+                        android:layout_height="169dp"
+                        android:onClick="selectBoca"
+                        android:background="@drawable/btn_boca13"/>
+                </TableRow>   
+                
+                <TableRow
+                    android:layout_height="fill_parent"
+                    android:layout_margin="1dp" >
+                    <Button
+                        android:id="@+id/BtnBoca14"
+                        android:layout_width="300dp"
+                        android:layout_height="169dp"
+                        android:onClick="selectBoca"
+                        android:background="@drawable/btn_boca14"/>
+                </TableRow>   
+                
+                <TableRow
+                    android:layout_height="fill_parent"
+                    android:layout_margin="1dp" >
+                    <Button
+                        android:id="@+id/BtnBoca15"
+                        android:layout_width="300dp"
+                        android:layout_height="169dp"
+                        android:onClick="selectBoca"
+                        android:background="@drawable/btn_boca15"/>
+                </TableRow>   
+                
+                <TableRow
+                    android:layout_height="fill_parent"
+                    android:layout_margin="1dp" >
+                    <Button
+                        android:id="@+id/BtnBoca16"
+                        android:layout_width="300dp"
+                        android:layout_height="169dp"
+                        android:onClick="selectBoca"
+                        android:background="@drawable/btn_boca16"/>
+                </TableRow>   
+                
+                <TableRow
+                    android:layout_height="fill_parent"
+                    android:layout_margin="1dp" >
+                    <Button
+                        android:id="@+id/BtnBoca17"
+                        android:layout_width="300dp"
+                        android:layout_height="169dp"
+                        android:onClick="selectBoca"
+                        android:background="@drawable/btn_boca17"/>
+                </TableRow>   
+                
+                <TableRow
+                    android:layout_height="fill_parent"
+                    android:layout_margin="1dp" >
+                    <Button
+                        android:id="@+id/BtnBoca18"
+                        android:layout_width="300dp"
+                        android:layout_height="169dp"
+                        android:onClick="selectBoca"
+                        android:background="@drawable/btn_boca18"/>
+                </TableRow>     
+                
+                <TableRow
+                    android:layout_height="fill_parent"
+                    android:layout_margin="1dp" >
+                    <Button
+                        android:id="@+id/BtnBoca19"
+                        android:layout_width="300dp"
+                        android:layout_height="169dp"
+                        android:onClick="selectBoca"
+                        android:background="@drawable/btn_boca19"/>
+                </TableRow>   
+                
+<!--                 <TableRow -->
+<!--                     android:layout_height="fill_parent" -->
+<!--                     android:layout_margin="1dp" > -->
+<!--                     <Button -->
+<!--                         android:id="@+id/BtnBoca20" -->
+<!--                         android:layout_width="300dp" -->
+<!--                         android:layout_height="169dp" -->
+<!--                         android:onClick="selectBoca" -->
+<!--                         android:background="@drawable/btn_boca20"/> -->
+<!--                 </TableRow>  -->
                  
                                 
             </TableLayout>
