@@ -287,6 +287,42 @@ public class CameraActivity extends Activity {
 				case 11:
 					img_rosto.setImageResource(R.drawable.olho11);
 					break;
+					
+				case 12:
+					img_rosto.setImageResource(R.drawable.olho12);
+					break;
+					
+				case 13:
+					img_rosto.setImageResource(R.drawable.olho13);
+					break;
+					
+				case 14:
+					img_rosto.setImageResource(R.drawable.olho14);
+					break;
+					
+				case 15:
+					img_rosto.setImageResource(R.drawable.olho15);
+					break;
+					
+				case 16:
+					img_rosto.setImageResource(R.drawable.olho16);
+					break;
+					
+				case 17:
+					img_rosto.setImageResource(R.drawable.olho17);
+					break;
+					
+				case 18:
+					img_rosto.setImageResource(R.drawable.olho18);
+					break;
+					
+				case 19:
+					img_rosto.setImageResource(R.drawable.olho19);
+					break;
+					
+				case 20:
+					img_rosto.setImageResource(R.drawable.olho20);
+					break;
 
 				default:
 					break;
@@ -335,7 +371,51 @@ public class CameraActivity extends Activity {
 
 				case 9:
 					img_rosto.setImageResource(R.drawable.nariz9);
-					break;					
+					break;			
+
+				case 10:
+					img_rosto.setImageResource(R.drawable.nariz10);
+					break;
+
+				case 11:
+					img_rosto.setImageResource(R.drawable.nariz11);
+					break;
+
+				case 12:
+					img_rosto.setImageResource(R.drawable.nariz12);
+					break;
+
+				case 13:
+					img_rosto.setImageResource(R.drawable.nariz13);
+					break;
+
+				case 14:
+					img_rosto.setImageResource(R.drawable.nariz14);
+					break;
+
+				case 15:
+					img_rosto.setImageResource(R.drawable.nariz15);
+					break;
+
+				case 16:
+					img_rosto.setImageResource(R.drawable.nariz16);
+					break;
+
+				case 17:
+					img_rosto.setImageResource(R.drawable.nariz17);
+					break;
+
+				case 18:
+					img_rosto.setImageResource(R.drawable.nariz18);
+					break;
+
+				case 19:
+					img_rosto.setImageResource(R.drawable.nariz19);
+					break;
+
+//				case 20:
+//					img_rosto.setImageResource(R.drawable.nariz20);
+//					break;
 
 				default:
 					break;
@@ -384,6 +464,50 @@ public class CameraActivity extends Activity {
 				case 9:
 					img_rosto.setImageResource(R.drawable.boca9);
 					break;
+
+				case 10:
+					img_rosto.setImageResource(R.drawable.boca10);
+					break;
+
+				case 11:
+					img_rosto.setImageResource(R.drawable.boca11);
+					break;
+
+				case 12:
+					img_rosto.setImageResource(R.drawable.boca12);
+					break;
+
+				case 13:
+					img_rosto.setImageResource(R.drawable.boca13);
+					break;
+
+				case 14:
+					img_rosto.setImageResource(R.drawable.boca14);
+					break;
+
+				case 15:
+					img_rosto.setImageResource(R.drawable.boca15);
+					break;
+
+				case 16:
+					img_rosto.setImageResource(R.drawable.boca16);
+					break;
+
+				case 17:
+					img_rosto.setImageResource(R.drawable.boca17);
+					break;
+
+				case 18:
+					img_rosto.setImageResource(R.drawable.boca18);
+					break;
+
+				case 19:
+					img_rosto.setImageResource(R.drawable.boca19);
+					break;
+
+//				case 20:
+//					img_rosto.setImageResource(R.drawable.boca20);
+//					break;
 
 				default:
 					break;

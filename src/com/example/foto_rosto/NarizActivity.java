@@ -75,20 +75,90 @@ public class NarizActivity extends Activity {
 			mudatela();
 			
 			break;
-		
-		case R.id.BtnNariz8:
-			
-			nariz = 8;
-			mudatela();
-			
-			break;
 			
 		case R.id.BtnNariz9:
 			
 			nariz = 9;
 			mudatela();
 			
-			break;			
+			break;		
+			
+		case R.id.BtnNariz10:
+			
+			nariz = 10;
+			mudatela();
+			
+			break;
+			
+		case R.id.BtnNariz11:
+			
+			nariz = 11;
+			mudatela();
+			
+			break;		
+			
+		case R.id.BtnNariz12:
+			
+			nariz = 12;
+			mudatela();
+			
+			break;		
+			
+		case R.id.BtnNariz13:
+			
+			nariz = 13;
+			mudatela();
+			
+			break;		
+			
+		case R.id.BtnNariz14:
+			
+			nariz = 14;
+			mudatela();
+			
+			break;		
+			
+		case R.id.BtnNariz15:
+			
+			nariz = 15;
+			mudatela();
+			
+			break;		
+			
+		case R.id.BtnNariz16:
+			
+			nariz = 16;
+			mudatela();
+			
+			break;		
+			
+		case R.id.BtnNariz17:
+			
+			nariz = 17;
+			mudatela();
+			
+			break;		
+			
+		case R.id.BtnNariz18:
+			
+			nariz = 18;
+			mudatela();
+			
+			break;		
+			
+		case R.id.BtnNariz19:
+			
+			nariz = 19;
+			mudatela();
+			
+			break;		
+			
+//		case R.id.BtnNariz20:
+//			
+//			nariz = 20;
+//			mudatela();
+//			
+//			break;					
 
 		default:
 			break;

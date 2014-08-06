@@ -88,7 +88,85 @@ public class BocaActivity extends Activity {
 			boca = 9;
 			mudatela();
 			
-			break;			
+			break;
+
+		case R.id.BtnBoca10:
+			
+			boca = 10;
+			mudatela();
+			
+			break;
+
+		case R.id.BtnBoca11:
+			
+			boca = 11;
+			mudatela();
+			
+			break;
+
+		case R.id.BtnBoca12:
+			
+			boca = 12;
+			mudatela();
+			
+			break;
+
+		case R.id.BtnBoca13:
+			
+			boca = 13;
+			mudatela();
+			
+			break;
+
+		case R.id.BtnBoca14:
+			
+			boca = 14;
+			mudatela();
+			
+			break;
+
+		case R.id.BtnBoca15:
+			
+			boca = 15;
+			mudatela();
+			
+			break;
+
+		case R.id.BtnBoca16:
+			
+			boca = 16;
+			mudatela();
+			
+			break;
+
+		case R.id.BtnBoca17:
+			
+			boca = 17;
+			mudatela();
+			
+			break;
+
+		case R.id.BtnBoca18:
+			
+			boca = 18;
+			mudatela();
+			
+			break;
+
+		case R.id.BtnBoca19:
+			
+			boca = 19;
+			mudatela();
+			
+			break;
+
+//		case R.id.BtnBoca20:
+//			
+//			boca = 20;
+//			mudatela();
+//			
+//			break;			
+			
 
 		default:
 			break;
