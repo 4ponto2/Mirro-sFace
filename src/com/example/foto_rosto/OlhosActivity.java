@@ -88,14 +88,14 @@ public class OlhosActivity extends Activity {
 			
 		case R.id.BtnOlhos9:
 			
-			olho = 8;
+			olho = 9;
 			mudatela();
 			
 			break;
 			
 		case R.id.BtnOlhos10:
 			
-			olho = 9;
+			olho = 10;
 			mudatela();
 			
 			break;
