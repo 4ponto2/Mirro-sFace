@@ -57,6 +57,21 @@
             android:label="@string/title_activity_boca"
             android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
         </activity>
+        
+        <activity
+            android:name=".ActivityPhotoEdit"
+            android:label="@string/title_activity_boca"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
+        </activity>		
+        
+         <!-- img crop -->
+		<activity 
+		    android:name="name.zhaoweihua.crop.CropImage" 
+		    android:screenOrientation="portrait">
+		</activity>
+		
+        
+		
     </application>
 
 </manifest>

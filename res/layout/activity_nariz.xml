@@ -256,18 +256,71 @@
                     
                 </TableRow>  
                 
-<!--                 <TableRow -->
-<!--                     android:layout_height="fill_parent" -->
-<!--                     android:layout_margin="1dp" > -->
+                <TableRow
+                    android:layout_height="fill_parent"
+                    android:layout_margin="1dp" >
                     
-<!--                     <Button -->
-<!--                         android:id="@+id/BtnNariz20" -->
-<!--                         android:layout_width="300dp" -->
-<!--                         android:layout_height="169dp" -->
-<!--                         android:onClick="selectNariz" -->
-<!--                         android:background="@drawable/btn_nariz20"/> -->
+                    <Button
+                        android:id="@+id/BtnNariz20"
+                        android:layout_width="300dp"
+                        android:layout_height="169dp"
+                        android:onClick="selectNariz"
+                        android:background="@drawable/btn_nariz20"/>
                     
-<!--                 </TableRow>   -->
+                </TableRow>
+                
+                <TableRow
+                    android:layout_height="fill_parent"
+                    android:layout_margin="1dp" >
+                    
+                    <Button
+                        android:id="@+id/BtnNariz21"
+                        android:layout_width="300dp"
+                        android:layout_height="169dp"
+                        android:onClick="selectNariz"
+                        android:background="@drawable/btn_nariz21"/>
+                    
+                </TableRow>  
+                
+                <TableRow
+                    android:layout_height="fill_parent"
+                    android:layout_margin="1dp" >
+                    
+                    <Button
+                        android:id="@+id/BtnNariz22"
+                        android:layout_width="300dp"
+                        android:layout_height="169dp"
+                        android:onClick="selectNariz"
+                        android:background="@drawable/btn_nariz22"/>
+                    
+                </TableRow>  
+                
+                <TableRow
+                    android:layout_height="fill_parent"
+                    android:layout_margin="1dp" >
+                    
+                    <Button
+                        android:id="@+id/BtnNariz23"
+                        android:layout_width="300dp"
+                        android:layout_height="169dp"
+                        android:onClick="selectNariz"
+                        android:background="@drawable/btn_nariz23"/>
+                    
+                </TableRow>  
+                
+                <TableRow
+                    android:layout_height="fill_parent"
+                    android:layout_margin="1dp" >
+                    
+                    <Button
+                        android:id="@+id/BtnNariz24"
+                        android:layout_width="300dp"
+                        android:layout_height="169dp"
+                        android:onClick="selectNariz"
+                        android:background="@drawable/btn_nariz24"/>
+                    
+                </TableRow>    
+                
                  
                                 
             </TableLayout>

@@ -4,12 +4,22 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.lang.ref.WeakReference;
 import java.text.SimpleDateFormat;
 
+import com.example.foto_rosto.ShareActivity.BitmapWorkerTask;
+
 import android.app.Activity;
+import android.app.ProgressDialog;
+import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.Handler;
+import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.PixelFormat;
 import android.hardware.Camera;
 import android.hardware.Camera.PictureCallback;
@@ -18,18 +28,20 @@ import android.provider.Settings;
 import android.provider.Settings.SettingNotFoundException;
 import android.util.Log;
 import android.view.KeyEvent;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 
 public class CameraActivity extends Activity {
 
 	    static Camera mCamera;
 	    private Camera_preview mPreview;
 	    private FrameLayout preview;
-	    private Intent ShareActivity;
+//	    private Intent ShareActivity;
 	    
 	    private String local_foto;
 	    
@@ -46,9 +58,61 @@ public class CameraActivity extends Activity {
 	    
 	    WindowManager.LayoutParams layoutParams;
 	    
+//	    ______________________________________
+	    
+		private Context m_context;
+		
+//		private Button btn_choose;
+		private ImageView img_shower;
+		
+		private static final int PHOTO_PICKED_WITH_DATA = 0x10;
+		
+		private static final int PHOTO_CROP_DATA = 0x11;
+		
+		protected static final int SHOW_LOAD_DIALOG = 0x201;
+		
+		protected static final int DISMISS_LOAD_DIALOG = 0x202;
+		
+		RelativeLayout progressBar;
+		
+		private ProgressDialog myLoadProgressDialog;
+		
+		private Handler myViewhandler = new Handler() {
+
+			public void handleMessage(android.os.Message msg) {
+				switch (msg.what) {
+				case SHOW_LOAD_DIALOG:
+					myLoadProgressDialog = new ProgressDialog(m_context);
+					myLoadProgressDialog
+							.setProgressStyle(ProgressDialog.STYLE_SPINNER);//
+
+					myLoadProgressDialog
+							.setMessage("loading image please wait ...");
+					myLoadProgressDialog.setIndeterminate(false);
+					myLoadProgressDialog.show();
+					break;
+				case DISMISS_LOAD_DIALOG:
+					myLoadProgressDialog.dismiss();
+					break;
+				default:
+					break;
+				}
+
+			};
+		};
+		
 	    @Override
 	    public void onCreate(Bundle savedInstanceState) {
 		        super.onCreate(savedInstanceState);
+		        
+		        getWindow().setFormat(PixelFormat.TRANSLUCENT);
+		        requestWindowFeature(Window.FEATURE_NO_TITLE);
+		        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+		        
+		        setContentView(R.layout.activity_camera);
+		        progressBar = (RelativeLayout) findViewById(R.id.ProgressBar);
+		        
+//		      progressBar.bringToFront();
 		        
 		        try {
 		        	toggleAutoBrightness();
@@ -57,14 +121,13 @@ public class CameraActivity extends Activity {
     		        e.printStackTrace();
     		    }
 		        
-		        getWindow().setFormat(PixelFormat.TRANSLUCENT);
-		        requestWindowFeature(Window.FEATURE_NO_TITLE);
-		        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-		        
-		        setContentView(R.layout.activity_camera);
+//		        getWindow().setFormat(PixelFormat.TRANSLUCENT);
+//		        requestWindowFeature(Window.FEATURE_NO_TITLE);
+//		        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+//		        
+//		        setContentView(R.layout.activity_camera);
+//		        progressBar = (RelativeLayout) findViewById(R.id.ProgressBar);
 		        w=h=0;
-		        
-		        ShareActivity = new Intent(getApplicationContext(), ShareActivity.class);
 		   
 		        // Create an instance of Camera
 		        mCamera = getCameraInstance();
@@ -77,6 +140,11 @@ public class CameraActivity extends Activity {
 		        orientation=1;
 		        	   
 		        init();
+		        
+				m_context = CameraActivity.this;
+				
+//				progressBar.setVisibility(View.INVISIBLE);
+					
 		    }
 	    
 	    private void init(){
@@ -97,6 +165,7 @@ public class CameraActivity extends Activity {
 			
 	    protected void onResume() {
 				super.onResume();
+				progressBar.setVisibility(View.INVISIBLE);
 		}
 		
 	    private void TirarFoto(){
@@ -110,13 +179,15 @@ public class CameraActivity extends Activity {
 	    	}
 		};
 			
+		
 		PictureCallback mPicture = new PictureCallback(){
 			public void onPictureTaken(byte[] data, Camera camera) {
 				try{
 					Log.d("FOTO", "onPictureTaken");
 					salvafoto(data,camera);
 					releaseCamera();
-					chamaShare();
+					setListeners();
+//					chamaShare();
 						
 				}catch(Error e){
 					Log.d("FOTO ERRO", "ERRO");
@@ -125,6 +196,12 @@ public class CameraActivity extends Activity {
 				}
 			}
 		};
+		
+		private void setListeners() {
+			
+				pickPhotoFromGallery();
+				
+		}
 		
 		public void salvafoto(byte[] data, Camera camera) {
 			File pictureFile = getOutputMediaFile();
@@ -213,11 +290,6 @@ public class CameraActivity extends Activity {
 		    return c;
 		    
 		}
-		
-		public void chamaShare(){
-			ShareActivity.putExtra("Foto_Local", local_foto);
-		    startActivity(ShareActivity);	        
-		}		    
 		
 		private void toggleAutoBrightness() throws SettingNotFoundException {
 
@@ -323,6 +395,30 @@ public class CameraActivity extends Activity {
 				case 20:
 					img_rosto.setImageResource(R.drawable.olho20);
 					break;
+					
+				case 21:
+					img_rosto.setImageResource(R.drawable.olhos21);
+					break;
+					
+				case 22:
+					img_rosto.setImageResource(R.drawable.olhos22);
+					break;
+					
+				case 23:
+					img_rosto.setImageResource(R.drawable.olhos23);
+					break;
+					
+				case 24:
+					img_rosto.setImageResource(R.drawable.olhos24);
+					break;
+					
+				case 25:
+					img_rosto.setImageResource(R.drawable.olhos25);
+					break;
+					
+				case 26:
+					img_rosto.setImageResource(R.drawable.olhos26);
+					break;
 
 				default:
 					break;
@@ -413,9 +509,25 @@ public class CameraActivity extends Activity {
 					img_rosto.setImageResource(R.drawable.nariz19);
 					break;
 
-//				case 20:
-//					img_rosto.setImageResource(R.drawable.nariz20);
-//					break;
+				case 20:
+					img_rosto.setImageResource(R.drawable.nariz20);
+					break;
+
+				case 21:
+					img_rosto.setImageResource(R.drawable.nariz21);
+					break;
+
+				case 22:
+					img_rosto.setImageResource(R.drawable.nariz22);
+					break;
+
+				case 23:
+					img_rosto.setImageResource(R.drawable.nariz23);
+					break;
+
+				case 24:
+					img_rosto.setImageResource(R.drawable.nariz24);
+					break;
 
 				default:
 					break;
@@ -505,9 +617,25 @@ public class CameraActivity extends Activity {
 					img_rosto.setImageResource(R.drawable.boca19);
 					break;
 
-//				case 20:
-//					img_rosto.setImageResource(R.drawable.boca20);
-//					break;
+				case 20:
+					img_rosto.setImageResource(R.drawable.boca20);
+					break;
+
+				case 21:
+					img_rosto.setImageResource(R.drawable.boca21);
+					break;
+
+				case 22:
+					img_rosto.setImageResource(R.drawable.boca22);
+					break;
+
+				case 23:
+					img_rosto.setImageResource(R.drawable.boca23);
+					break;
+
+				case 24:
+					img_rosto.setImageResource(R.drawable.boca24);
+					break;
 
 				default:
 					break;
@@ -521,11 +649,166 @@ public class CameraActivity extends Activity {
 			}
 	}
 
-		    public void onBackPressed(){
+	    public void onBackPressed(){
 		        CameraActivity.this.finish();
 		        android.os.Process.killProcess(android.os.Process.myPid());
 		        System.exit(0);
 		        getParent().finish();
 		    }
+	
+	    
+	    
+	//   ________________________________________________________________________
+	//  ________________________________________________________________________
+	//  ________________________________________________________________________
+	//  ________________________________________________________________________
+
+		
+		private void pickPhotoFromGallery() {
+
+			Intent intent = new Intent(this,
+					name.zhaoweihua.crop.CropImage.class);
+
+			Bundle extras = new Bundle();
+
+			extras.putString("circleCrop", "true");
+			extras.putInt("aspectX", 200);
+			extras.putInt("aspectY", 200);
+			extras.putString("Local", local_foto);
 			
+			intent.putExtras(extras);
+			
+			startActivity(intent);
+		}
+		
+//		protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+//			super.onActivityResult(requestCode, resultCode, data);
+//			if (resultCode == RESULT_OK) {
+//				switch (requestCode) {
+//				case PHOTO_PICKED_WITH_DATA:
+//
+//					Uri uri = data.getData();
+//					Intent intent = new Intent(this,
+//							name.zhaoweihua.crop.CropImage.class);
+//					Bundle extras = new Bundle();
+//					extras.putString("circleCrop", "true");
+//					extras.putInt("aspectX", 200);
+//					extras.putInt("aspectY", 200);
+//					intent.setDataAndType(uri, "image/jpeg");
+//					intent.putExtras(extras);
+//					startActivityForResult(intent, PHOTO_CROP_DATA);
+//					break;
+//				case PHOTO_CROP_DATA: // show back data
+//
+//					String srcData = data.getExtras().getString("data-src");
+//					myViewhandler.sendEmptyMessage(SHOW_LOAD_DIALOG);
+//					BitmapWorkerTask task = new BitmapWorkerTask(img_shower);
+//					task.execute(srcData);
+//
+//				}
+//			}
+//
+//		}
+
+		public static Bitmap decodeBitmapFromFile(String src, int reqWidth, int reqHeight) {
+
+			// First decode with inJustDecodeBounds=true to check dimensions
+
+			final BitmapFactory.Options options = new BitmapFactory.Options();
+
+			options.inJustDecodeBounds = true;
+
+			BitmapFactory.decodeFile(src, options);
+
+			// Calculate inSampleSize
+
+			options.inSampleSize = calculateInSampleSize(options, reqWidth,
+					reqHeight);
+			// options.inPreferredConfig =Bitmap.Config.RGB_565;
+			// Decode bitmap with inSampleSize set
+
+			options.inJustDecodeBounds = false;
+
+			return BitmapFactory.decodeFile(src, options);
+
+		}
+
+		public static int calculateInSampleSize(
+
+		BitmapFactory.Options options, int reqWidth, int reqHeight) {
+
+			// Raw height and width of image
+
+			final int height = options.outHeight;
+
+			final int width = options.outWidth;
+
+			int inSampleSize = 1;
+
+			if (height > reqHeight || width > reqWidth) {
+
+				if (width > height) {
+
+					inSampleSize = Math.round((float) height / (float) reqHeight);
+
+				} else {
+
+					inSampleSize = Math.round((float) width / (float) reqWidth);
+
+				}
+
+			}
+
+			return inSampleSize;
+
+		}
+
+		class BitmapWorkerTask extends AsyncTask<String, Void, Bitmap> {
+
+			private final WeakReference<ImageView> imageViewReference;
+
+			// for define to close avoid warning leak.
+			// AlertDialog ImageDialog;
+			public BitmapWorkerTask(ImageView imageView) {
+
+				// Use a WeakReference to ensure the ImageView can be garbage
+				// collected
+				imageViewReference = new WeakReference<ImageView>(imageView);
+
+			}
+
+			// Decode image in background.
+
+			@Override
+			protected Bitmap doInBackground(String... params) {
+
+				final Bitmap bitmap = decodeBitmapFromFile(params[0], 300, 300);
+
+				return bitmap;
+
+			}
+
+			// Once complete, see if ImageView is still around and set bitmap.
+
+			@Override
+			protected void onPostExecute(Bitmap bitmap) {
+
+				if (imageViewReference != null && bitmap != null) {
+
+					final ImageView imageView = imageViewReference.get();
+
+					if (imageView != null) {
+
+						Log.d("imageview------------------",
+								"debug view image load");
+						imageView.setImageBitmap(bitmap);
+						myViewhandler.sendEmptyMessage(DISMISS_LOAD_DIALOG);
+					}
+
+				}
+
+			}
+
+		}    
+	    
 	}

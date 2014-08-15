@@ -168,6 +168,48 @@ public class OlhosActivity extends Activity {
 			olho = 20;
 			mudatela();
 			
+			break;	
+
+		case R.id.BtnOlhos21:
+			
+			olho = 21;
+			mudatela();
+			
+			break;	
+
+		case R.id.BtnOlhos22:
+			
+			olho = 22;
+			mudatela();
+			
+			break;	
+
+		case R.id.BtnOlhos23:
+			
+			olho = 23;
+			mudatela();
+			
+			break;	
+
+		case R.id.BtnOlhos24:
+			
+			olho = 24;
+			mudatela();
+			
+			break;	
+
+		case R.id.BtnOlhos25:
+			
+			olho = 25;
+			mudatela();
+			
+			break;	
+
+		case R.id.BtnOlhos26:
+			
+			olho = 26;
+			mudatela();
+			
 			break;				
 
 		default:

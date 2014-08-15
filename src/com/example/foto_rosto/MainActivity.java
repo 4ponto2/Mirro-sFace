@@ -15,7 +15,9 @@ public class MainActivity extends Activity {
 		@Override
 		protected void onCreate(Bundle savedInstanceState) {
 			super.onCreate(savedInstanceState);
+		 
 			init();
+			
 			setContentView(R.layout.activity_main);
 		}	
 		
@@ -26,6 +28,7 @@ public class MainActivity extends Activity {
 	    	narizActivity = new Intent(getApplicationContext(), NarizActivity.class);
 	    	bocaActivity = new Intent(getApplicationContext(), BocaActivity.class);
 	        wasExecuted = false;
+	    
 	    }
 
 	    public void proxima(View view){

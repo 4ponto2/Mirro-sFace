@@ -153,12 +153,40 @@ public class NarizActivity extends Activity {
 			
 			break;		
 			
-//		case R.id.BtnNariz20:
-//			
-//			nariz = 20;
-//			mudatela();
-//			
-//			break;					
+		case R.id.BtnNariz20:
+			
+			nariz = 20;
+			mudatela();
+			
+			break;	
+			
+		case R.id.BtnNariz21:
+			
+			nariz = 21;
+			mudatela();
+			
+			break;	
+			
+		case R.id.BtnNariz22:
+			
+			nariz = 22;
+			mudatela();
+			
+			break;	
+			
+		case R.id.BtnNariz23:
+			
+			nariz = 23;
+			mudatela();
+			
+			break;	
+			
+		case R.id.BtnNariz24:
+			
+			nariz = 24;
+			mudatela();
+			
+			break;					
 
 		default:
 			break;

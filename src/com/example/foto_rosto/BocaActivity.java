@@ -160,12 +160,40 @@ public class BocaActivity extends Activity {
 			
 			break;
 
-//		case R.id.BtnBoca20:
-//			
-//			boca = 20;
-//			mudatela();
-//			
-//			break;			
+		case R.id.BtnBoca20:
+			
+			boca = 20;
+			mudatela();
+			
+			break;
+
+		case R.id.BtnBoca21:
+			
+			boca = 21;
+			mudatela();
+			
+			break;	
+
+		case R.id.BtnBoca22:
+			
+			boca = 22;
+			mudatela();
+			
+			break;	
+
+		case R.id.BtnBoca23:
+			
+			boca = 23;
+			mudatela();
+			
+			break;	
+
+		case R.id.BtnBoca24:
+			
+			boca = 24;
+			mudatela();
+			
+			break;				
 			
 
 		default:

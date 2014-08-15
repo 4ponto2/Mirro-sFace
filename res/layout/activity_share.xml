@@ -2,15 +2,113 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ShareActivity" >
+    tools:context=".ShareActivity" 
+    android:background="@drawable/bg">
 
     
     <ImageView
         android:id="@+id/ImageFoto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:visibility="visible" />
 
+	<RelativeLayout 
+    	android:id="@+id/rlPhotoEdit"
+    	android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+		android:fillViewport="true"
+		android:layout_alignParentBottom="true">
+    
+    <LinearLayout
+        android:id="@+id/llSaturationTool"
+        android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="5dp"
+		android:layout_marginRight="5dp"
+		android:orientation="horizontal"
+		android:gravity="center">
+<!-- 		android:layout_below="@id/llEditToolbar" -->
+    
+	    <TextView
+	        android:id="@+id/tvSaturationBarTitle"
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="30"
+	        android:layout_marginLeft="5dp"
+	        android:text="Saturation"
+	        android:textSize="16sp"/>
+	    
+	     <SeekBar
+	        android:id="@+id/sbSaturation"
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="70"
+	        android:max="512"
+	        android:progress="256"/>
+     
+     </LinearLayout>
+     
+    <LinearLayout
+        android:id="@+id/llContrastTool"
+        android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/llSaturationTool"
+		android:layout_marginLeft="5dp"
+		android:layout_marginRight="5dp"
+		android:orientation="horizontal"
+		android:gravity="center">
+    
+	    <TextView
+	        android:id="@+id/tvContrastBarTitle"
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="30"
+	        android:layout_marginLeft="5dp"
+	        android:text="Contrast"
+	        android:textSize="16sp"/>
+	    
+	     <SeekBar
+	        android:id="@+id/sbContrast"
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="70"
+	        android:max="10"
+	        android:progress="1"/>
+     
+     </LinearLayout>
+         
+    <LinearLayout
+        android:id="@+id/llBrightnessTool"
+        android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/llContrastTool"
+		android:layout_marginLeft="5dp"
+		android:layout_marginRight="5dp"
+		android:orientation="horizontal"
+		android:gravity="center">
+    
+	    <TextView
+	        android:id="@+id/tvBrightnessBarTitle"
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="30"
+	        android:layout_marginLeft="5dp"
+	        android:text="Brightness"
+	        android:textSize="16sp"/>
+	    
+	     <SeekBar
+	        android:id="@+id/sbBrightness"
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="70"
+	        android:max="510"
+	        android:progress="255"/>
+     
+     </LinearLayout>
+
+        
+	</RelativeLayout>
+    
 </RelativeLayout>
