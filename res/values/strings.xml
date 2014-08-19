@@ -9,11 +9,11 @@
     <string name="title_activity_olhos">OlhosActivity</string>
     <string name="title_activity_nariz">NarizActivity</string>
     <string name="title_activity_boca">BocaActivity</string>
-    
+
     <color name="Black">#000000</color>
     <color name="White">#FFFFFF</color>
     <color name="Midnight_Gray">#232823</color>
-	<color name="Mango_Sorbet">#EF9D4D</color>
+    <color name="Mango_Sorbet">#EF9D4D</color>
     <color name="Deep_Coral">#E0312E</color>
     <color name="Hot_Seagreen">#2DDE95</color>
     <color name="Dark_Seagreen">#548D98</color>
@@ -21,6 +21,8 @@
     <color name="Dark_Blue">#093056</color>
     <color name="Alpha_Dark">#9905223f</color>
     <color name="Water_Green">#00cc99</color>
-    
+
+    <string name="title_activity_splash4p2_activity">Splash4p2_activity</string>
+    <string name="title_activity_splash_selfie_swap">Splash_selfieSwapActivity</string>
 
 </resources>

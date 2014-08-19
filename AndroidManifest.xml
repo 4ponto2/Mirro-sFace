@@ -11,8 +11,10 @@
     <uses-feature android:name="android.hardware.camera" />
 
     <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <uses-feature android:name="android.hardware.camera.autofocus" />
 
@@ -22,14 +24,25 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".MainActivity"
-            android:label="@string/app_name" 
+            android:name=".Splash4p2_activity"
             android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
         </activity>
         <activity
             android:name=".CameraActivity"
@@ -44,7 +57,7 @@
         </activity>
         <activity
             android:name=".OlhosActivity"
-            android:label="@string/title_activity_olhos" 
+            android:label="@string/title_activity_olhos"
             android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
         </activity>
         <activity
@@ -57,21 +70,22 @@
             android:label="@string/title_activity_boca"
             android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
         </activity>
-        
         <activity
             android:name=".ActivityPhotoEdit"
             android:label="@string/title_activity_boca"
             android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
-        </activity>		
-        
-         <!-- img crop -->
-		<activity 
-		    android:name="name.zhaoweihua.crop.CropImage" 
-		    android:screenOrientation="portrait">
-		</activity>
-		
-        
-		
+        </activity>
+
+        <!-- img crop -->
+        <activity
+            android:name="name.zhaoweihua.crop.CropImage"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Splash_selfieSwapActivity"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
+            android:label="@string/title_activity_splash_selfie_swap" >
+        </activity>
     </application>
 
 </manifest>
