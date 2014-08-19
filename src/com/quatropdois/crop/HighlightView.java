@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package name.zhaoweihua.crop;
+package com.quatropdois.crop;
 
 import com.example.foto_rosto.R;
 import android.graphics.Canvas;

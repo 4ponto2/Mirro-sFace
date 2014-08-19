@@ -1,10 +1,14 @@
-package com.example.foto_rosto;
+package com.quatropdois.foto_rosto;
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
+
+import com.example.foto_rosto.R;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 
 import android.app.Dialog;
 import android.content.Intent;
@@ -58,6 +62,11 @@ public class ActivityPhotoEdit extends MyActivity{
 		super.onCreate(savedInstanceBundle);
 		super.initialize(R.layout.activity_photo_edit, "COMPARTILHE",
 			R.id.ShareTitleBar);
+		
+    	AdView adView = (AdView)this.findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        adView.loadAd(adRequest);
+		
 		setPhoto();
 		setTools();
 	}

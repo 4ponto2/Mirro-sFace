@@ -1,4 +1,4 @@
-package com.example.foto_rosto;
+package com.quatropdois.foto_rosto;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -7,7 +7,8 @@ import java.io.IOException;
 import java.lang.ref.WeakReference;
 import java.text.SimpleDateFormat;
 
-import com.example.foto_rosto.ShareActivity.BitmapWorkerTask;
+import com.example.foto_rosto.R;
+import com.quatropdois.foto_rosto.ShareActivity.BitmapWorkerTask;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
@@ -667,7 +668,7 @@ public class CameraActivity extends Activity {
 		private void pickPhotoFromGallery() {
 
 			Intent intent = new Intent(this,
-					name.zhaoweihua.crop.CropImage.class);
+					com.quatropdois.crop.CropImage.class);
 
 			Bundle extras = new Bundle();
 

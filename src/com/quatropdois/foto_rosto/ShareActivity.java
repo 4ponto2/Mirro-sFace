@@ -1,4 +1,4 @@
-package com.example.foto_rosto;
+package com.quatropdois.foto_rosto;
 
 import java.io.BufferedOutputStream;
 import java.io.File;
@@ -446,7 +446,7 @@ public class ShareActivity extends Activity {
 	private void activityvai(){
 
 		Intent intent = new Intent(this,
-				name.zhaoweihua.crop.CropImage.class);
+				com.quatropdois.crop.CropImage.class);
 
 //		String local = "/mnt/sdcard/Pictures/Mirror's Cam/IMG_20140811_101020.jpg";
 		

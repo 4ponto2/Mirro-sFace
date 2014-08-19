@@ -18,13 +18,18 @@
 
     <uses-feature android:name="android.hardware.camera.autofocus" />
 
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />    
+    
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".Splash4p2_activity"
+            android:name="com.quatropdois.foto_rosto.Splash4p2_activity"
             android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -33,7 +38,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name="com.quatropdois.foto_rosto.MainActivity"
             android:label="@string/app_name"
             android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
 
@@ -45,44 +50,44 @@
             <!-- </intent-filter> -->
         </activity>
         <activity
-            android:name=".CameraActivity"
+            android:name="com.quatropdois.foto_rosto.CameraActivity"
             android:label="@string/title_activity_camera"
             android:screenOrientation="landscape"
             android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
         </activity>
         <activity
-            android:name=".ShareActivity"
+            android:name="com.quatropdois.foto_rosto.ShareActivity"
             android:label="@string/title_activity_share"
             android:theme="@android:style/Theme.DeviceDefault" >
         </activity>
         <activity
-            android:name=".OlhosActivity"
+            android:name="com.quatropdois.foto_rosto.OlhosActivity"
             android:label="@string/title_activity_olhos"
             android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
         </activity>
         <activity
-            android:name=".NarizActivity"
+            android:name="com.quatropdois.foto_rosto.NarizActivity"
             android:label="@string/title_activity_nariz"
             android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
         </activity>
         <activity
-            android:name=".BocaActivity"
+            android:name="com.quatropdois.foto_rosto.BocaActivity"
             android:label="@string/title_activity_boca"
             android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
         </activity>
         <activity
-            android:name=".ActivityPhotoEdit"
+            android:name="com.quatropdois.foto_rosto.ActivityPhotoEdit"
             android:label="@string/title_activity_boca"
             android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
         </activity>
 
         <!-- img crop -->
         <activity
-            android:name="name.zhaoweihua.crop.CropImage"
+            android:name="com.quatropdois.crop.CropImage"
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name=".Splash_selfieSwapActivity"
+            android:name="com.quatropdois.foto_rosto.Splash_selfieSwapActivity"
             android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
             android:label="@string/title_activity_splash_selfie_swap" >
         </activity>

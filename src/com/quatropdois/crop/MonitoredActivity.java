@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package name.zhaoweihua.crop;
+package com.quatropdois.crop;
 
 import android.app.Activity;
 import android.os.Bundle;

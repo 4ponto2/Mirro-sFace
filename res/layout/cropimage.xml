@@ -10,7 +10,7 @@
             android:layout_height="fill_parent"
             android:orientation="horizontal">
 
-        <view class="name.zhaoweihua.crop.CropImageView" 
+        <view class="com.quatropdois.crop.CropImageView" 
             	android:id="@+id/image"
                 android:background="#55000000"
                 android:layout_width="fill_parent"

@@ -1,4 +1,4 @@
-package com.example.foto_rosto;
+package com.quatropdois.foto_rosto;
 
 import java.io.IOException;
 

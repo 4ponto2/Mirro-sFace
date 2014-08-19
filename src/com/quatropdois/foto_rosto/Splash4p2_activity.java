@@ -1,4 +1,6 @@
-package com.example.foto_rosto;
+package com.quatropdois.foto_rosto;
+
+import com.example.foto_rosto.R;
 
 import android.app.Activity;
 import android.content.ActivityNotFoundException;

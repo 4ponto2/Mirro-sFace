@@ -1,4 +1,4 @@
-package com.example.foto_rosto;
+package com.quatropdois.foto_rosto;
 
 
 import java.io.BufferedOutputStream;
@@ -6,6 +6,8 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+
+import com.example.foto_rosto.R;
 
 import android.content.Context;
 import android.content.ContextWrapper;
@@ -63,8 +65,8 @@ public class MyActivity extends FragmentActivity{
 	private void setActionBar(String title, int id) {
 		lTitleBar = findViewById(id);
 		if(title != null){
-			com.example.foto_rosto.MyTextView tvTitle = 
-				(com.example.foto_rosto.MyTextView)lTitleBar.findViewById(R.id.tvTitle);
+			com.quatropdois.foto_rosto.MyTextView tvTitle = 
+				(com.quatropdois.foto_rosto.MyTextView)lTitleBar.findViewById(R.id.tvTitle);
 			tvTitle.setText(title);
 		}
 	}

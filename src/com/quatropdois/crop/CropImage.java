@@ -21,7 +21,7 @@
  * update:add auto create image file to  /CropImage  return image path to Cropback
  * mail:addw806@aliyun.com
  */
-package name.zhaoweihua.crop;
+package com.quatropdois.crop;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -33,11 +33,11 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.concurrent.CountDownLatch;
 
-import com.example.foto_rosto.ActivityPhotoEdit;
-import com.example.foto_rosto.CameraActivity;
-import com.example.foto_rosto.MainActivity;
 import com.example.foto_rosto.R;
-import com.example.foto_rosto.ShareActivity;
+import com.quatropdois.foto_rosto.ActivityPhotoEdit;
+import com.quatropdois.foto_rosto.CameraActivity;
+import com.quatropdois.foto_rosto.MainActivity;
+import com.quatropdois.foto_rosto.ShareActivity;
 
 import android.app.ProgressDialog;
 import android.content.ContentResolver;

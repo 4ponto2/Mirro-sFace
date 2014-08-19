@@ -19,7 +19,7 @@
             android:scaleType="fitCenter"
             android:src="@drawable/ic_action_previous_item" />
 
-        <com.example.foto_rosto.MyTextView 
+        <com.quatropdois.foto_rosto.MyTextView 
             android:id="@+id/tvTitle"
             android:layout_width="0dp"
             android:layout_height="match_parent"

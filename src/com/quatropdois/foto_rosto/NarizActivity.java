@@ -1,4 +1,8 @@
-package com.example.foto_rosto;
+package com.quatropdois.foto_rosto;
+
+import com.example.foto_rosto.R;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -18,6 +22,10 @@ public class NarizActivity extends Activity {
 	}
 	
 	private void init(){
+		
+    	AdView adView = (AdView)this.findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        adView.loadAd(adRequest);
 		
 		cameraActivity = new Intent(getApplicationContext(), CameraActivity.class);
 		

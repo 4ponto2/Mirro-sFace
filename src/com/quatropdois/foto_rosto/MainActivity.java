@@ -1,4 +1,9 @@
-package com.example.foto_rosto;
+package com.quatropdois.foto_rosto;
+
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
+import com.example.foto_rosto.R;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -23,11 +28,20 @@ public class MainActivity extends Activity {
 		
 	    public void init()
 	    {
+
+	    	AdView adView = (AdView)this.findViewById(R.id.adView);
+	        AdRequest adRequest = new AdRequest.Builder().build();
+	        adView.loadAd(adRequest);
+	    	
 //	    	mainActivity = new Intent(getApplicationContext(), CameraActivity.class);
 	    	olhosActivity = new Intent(getApplicationContext(), OlhosActivity.class);
 	    	narizActivity = new Intent(getApplicationContext(), NarizActivity.class);
 	    	bocaActivity = new Intent(getApplicationContext(), BocaActivity.class);
 	        wasExecuted = false;
+	        
+	        
+	        
+	        
 	    
 	    }
 
