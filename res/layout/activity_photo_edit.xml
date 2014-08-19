@@ -90,7 +90,8 @@
                 android:layout_weight="70"
                 android:max="512"
                 android:progress="256"
-                android:thumb="@drawable/camera_crop_height" />
+                android:progressDrawable="@drawable/custom_seekbar"
+                android:thumb="@drawable/camera_crop_width" />
 
         </LinearLayout>
 
@@ -121,7 +122,8 @@
                 android:layout_weight="70"
                 android:max="10"
                 android:progress="1"
-                android:thumb="@drawable/camera_crop_height" />
+                android:progressDrawable="@drawable/custom_seekbar"
+                android:thumb="@drawable/camera_crop_width" />
         </LinearLayout>
 
         <LinearLayout
@@ -151,7 +153,8 @@
                 android:layout_weight="70"
                 android:max="510"
                 android:progress="255"
-                android:thumb="@drawable/camera_crop_height" />
+                android:progressDrawable="@drawable/custom_seekbar"
+                android:thumb="@drawable/camera_crop_width" />
         </LinearLayout>
     </RelativeLayout>
   
