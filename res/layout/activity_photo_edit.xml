@@ -60,7 +60,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true" 
-        android:layout_marginBottom="10dp">
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/Alpha_Dark">
 
         <LinearLayout
             android:id="@+id/llSaturationTool"
@@ -78,7 +80,8 @@
                 android:layout_marginLeft="5dp"
                 android:layout_weight="30"
                 android:text="Saturation"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                android:textColor="@color/Water_Green" />
 
             <SeekBar
                 android:id="@+id/sbSaturation"
@@ -108,7 +111,8 @@
                 android:layout_marginLeft="5dp"
                 android:layout_weight="30"
                 android:text="Contrast"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                android:textColor="@color/Water_Green" />
 
             <SeekBar
                 android:id="@+id/sbContrast"
@@ -137,7 +141,8 @@
                 android:layout_marginLeft="5dp"
                 android:layout_weight="30"
                 android:text="Brightness"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                android:textColor="@color/Water_Green" />
 
             <SeekBar
                 android:id="@+id/sbBrightness"
