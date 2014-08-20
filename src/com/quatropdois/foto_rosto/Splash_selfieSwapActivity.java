@@ -5,21 +5,14 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
 import android.app.Activity;
-import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
-import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 public class Splash_selfieSwapActivity extends Activity {
 	
 	protected static final String TAG = "SplashScreenSelfieSwap";
-	private static final long TEMPO_DURACAO_ENTRADA = 1000;
 	
 	private Intent main;
 
@@ -28,14 +21,13 @@ public class Splash_selfieSwapActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_splash_selfie_swap);
 		
-
-    	AdView adView = (AdView)this.findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        adView.loadAd(adRequest);
-        
-		
 		main = new Intent(getApplicationContext(), MainActivity.class);
 		
+//        AdView adView = (AdView) findViewById(R.id.adView);
+//	    AdRequest adRequest = new AdRequest.Builder()
+//       .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
+//	        .build();
+//	    adView.loadAd(adRequest);	
 		
 		 final Button button = (Button) findViewById(R.id.button1);
          button.setOnClickListener(new View.OnClickListener() {

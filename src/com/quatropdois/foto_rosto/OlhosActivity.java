@@ -25,9 +25,11 @@ public class OlhosActivity extends Activity {
 	
 	private void init(){
 		
-    	AdView adView = (AdView)this.findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        adView.loadAd(adRequest);
+		AdView adView = (AdView) findViewById(R.id.adView);
+	    AdRequest adRequest = new AdRequest.Builder()
+       .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
+	        .build();
+	    adView.loadAd(adRequest);	
 		
 		cameraActivity = new Intent(getApplicationContext(), CameraActivity.class);
 		

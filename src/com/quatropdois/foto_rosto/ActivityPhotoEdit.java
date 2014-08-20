@@ -63,12 +63,19 @@ public class ActivityPhotoEdit extends MyActivity{
 		super.initialize(R.layout.activity_photo_edit, "COMPARTILHE",
 			R.id.ShareTitleBar);
 		
-    	AdView adView = (AdView)this.findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        adView.loadAd(adRequest);
-		
+    	setAdMob();
 		setPhoto();
 		setTools();
+	}
+	
+	private void setAdMob(){
+		
+		AdView adView = (AdView) findViewById(R.id.adView);
+	    AdRequest adRequest = new AdRequest.Builder()
+       .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
+	        .build();
+	    adView.loadAd(adRequest);
+	    
 	}
 	                                                                            
 	@Override

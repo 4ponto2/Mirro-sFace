@@ -21,27 +21,33 @@ public class MainActivity extends Activity {
 		protected void onCreate(Bundle savedInstanceState) {
 			super.onCreate(savedInstanceState);
 		 
+			setContentView(R.layout.activity_main);
+			
+			setAdMob();
+			
 			init();
 			
-			setContentView(R.layout.activity_main);
-		}	
+			
+		}
+		
+		private void setAdMob(){
+			
+			AdView adView = (AdView) findViewById(R.id.adView);
+		    AdRequest adRequest = new AdRequest.Builder()
+	       .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
+		        .build();
+		    adView.loadAd(adRequest);
+		    
+		}
 		
 	    public void init()
 	    {
 
-	    	AdView adView = (AdView)this.findViewById(R.id.adView);
-	        AdRequest adRequest = new AdRequest.Builder().build();
-	        adView.loadAd(adRequest);
-	    	
 //	    	mainActivity = new Intent(getApplicationContext(), CameraActivity.class);
 	    	olhosActivity = new Intent(getApplicationContext(), OlhosActivity.class);
 	    	narizActivity = new Intent(getApplicationContext(), NarizActivity.class);
 	    	bocaActivity = new Intent(getApplicationContext(), BocaActivity.class);
 	        wasExecuted = false;
-	        
-	        
-	        
-	        
 	    
 	    }
 
