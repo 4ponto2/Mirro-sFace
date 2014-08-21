@@ -23,11 +23,11 @@ public class Splash_selfieSwapActivity extends Activity {
 		
 		main = new Intent(getApplicationContext(), MainActivity.class);
 		
-//        AdView adView = (AdView) findViewById(R.id.adView);
-//	    AdRequest adRequest = new AdRequest.Builder()
-//       .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
-//	        .build();
-//	    adView.loadAd(adRequest);	
+        AdView adView = (AdView) findViewById(R.id.adView);
+	    AdRequest adRequest = new AdRequest.Builder()
+       .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
+	        .build();
+	    adView.loadAd(adRequest);	
 		
 		 final Button button = (Button) findViewById(R.id.button1);
          button.setOnClickListener(new View.OnClickListener() {
