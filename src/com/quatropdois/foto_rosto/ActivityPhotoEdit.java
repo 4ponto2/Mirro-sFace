@@ -9,6 +9,7 @@ import java.util.List;
 import com.example.foto_rosto.R;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.quatropdois.crop.CropImage;
 
 import android.app.Dialog;
 import android.content.Intent;

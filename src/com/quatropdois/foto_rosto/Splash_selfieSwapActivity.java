@@ -7,6 +7,7 @@ import com.google.android.gms.ads.AdView;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -28,7 +29,7 @@ public class Splash_selfieSwapActivity extends Activity {
        .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
 	        .build();
 	    adView.loadAd(adRequest);	
-		
+	    
 		 final Button button = (Button) findViewById(R.id.button1);
          button.setOnClickListener(new View.OnClickListener() {
              public void onClick(View v) {
@@ -38,19 +39,14 @@ public class Splash_selfieSwapActivity extends Activity {
              }
          });
 		
-		
-//		new Handler().postDelayed(new Runnable() {
-//			
-//			public void run() {
-//				try{
-//					//Metodo que invoca a outra activity
-//					startActivity(new Intent(Splash_selfieSwapActivity.this, MainActivity.class));
-//					Log.d(TAG, "Tela 1");
-//				}catch(ActivityNotFoundException e){
-//					Log.e(TAG, e.getMessage());
-//				}
-//			}
-//		}, TEMPO_DURACAO_ENTRADA);		
 	}
+	
+    public void onBackPressed(){
+	 	   Log.i("HA", "Finishing");
+	 	   Intent intent = new Intent(Intent.ACTION_MAIN);
+	 	   intent.addCategory(Intent.CATEGORY_HOME);
+	 	   intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+	 	   startActivity(intent);
+	 }	
 	
 }

@@ -34,6 +34,8 @@ import java.util.Date;
 import java.util.concurrent.CountDownLatch;
 
 import com.example.foto_rosto.R;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.quatropdois.foto_rosto.ActivityPhotoEdit;
 import com.quatropdois.foto_rosto.CameraActivity;
 import com.quatropdois.foto_rosto.MainActivity;
@@ -132,6 +134,7 @@ public class CropImage extends MonitoredActivity {
 		super.onCreate(icicle);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.cropimage);
+		setAdMob();
 		mImageView = (CropImageView) findViewById(R.id.image);
 		mImageView.mContext = this;
 		m_context = this;
@@ -209,6 +212,16 @@ public class CropImage extends MonitoredActivity {
 		});
 
 		startFaceDetection();
+	}
+	
+	private void setAdMob(){
+		
+		AdView adView = (AdView) findViewById(R.id.adView);
+	    AdRequest adRequest = new AdRequest.Builder()
+       .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
+	        .build();
+	    adView.loadAd(adRequest);
+	    
 	}
 
 	private void startFaceDetection() {
@@ -583,6 +596,12 @@ public class CropImage extends MonitoredActivity {
 		super.onDestroy();
 	}
 
+    public void onBackPressed(){
+        CropImage.this.finish();
+        android.os.Process.killProcess(android.os.Process.myPid());
+        System.exit(0);
+        getParent().finish();
+    }
 }
 
 class CropImageView extends ImageViewTouchBase {

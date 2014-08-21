@@ -2,7 +2,6 @@ package com.quatropdois.foto_rosto;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
-
 import com.example.foto_rosto.R;
 
 import android.app.Activity;
@@ -86,11 +85,22 @@ public class MainActivity extends Activity {
 	    }
 	    
 	    public void onBackPressed(){
-	 	   Log.i("HA", "Finishing");
-	 	   Intent intent = new Intent(Intent.ACTION_MAIN);
-	 	   intent.addCategory(Intent.CATEGORY_HOME);
-	 	   intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-	 	   startActivity(intent);
-	 }
+	        MainActivity.this.finish();
+	        android.os.Process.killProcess(android.os.Process.myPid());
+	        System.exit(0);
+	        getParent().finish();
+	    }
+	    
+//	    public void onBackPressed(){
+	    	
+//	    	Intent ini = new Intent(getApplicationContext(), Splash_selfieSwapActivity.class);
+//	    	startActivity(ini);
+	    	
+//	 	   Log.i("HA", "Finishing");
+//	 	   Intent intent = new Intent(Intent.ACTION_MAIN);
+//	 	   intent.addCategory(Intent.CATEGORY_HOME);
+//	 	   intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//	 	   startActivity(intent);
+//	    }
 
 	}

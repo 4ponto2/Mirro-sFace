@@ -212,7 +212,7 @@ public class NarizActivity extends Activity {
 		
 	}
 
-    public void onBackPressed(){
+     public void onBackPressed(){
         NarizActivity.this.finish();
         android.os.Process.killProcess(android.os.Process.myPid());
         System.exit(0);
