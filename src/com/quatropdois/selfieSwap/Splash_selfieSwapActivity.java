@@ -1,8 +1,8 @@
-package com.quatropdois.foto_rosto;
+package com.quatropdois.selfieSwap;
 
-import com.example.foto_rosto.R;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.quatropdois.selfieSwap.R;
 
 import android.app.Activity;
 import android.content.Intent;

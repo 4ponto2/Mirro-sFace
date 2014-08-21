@@ -1,202 +1,211 @@
-package com.quatropdois.foto_rosto;
+package com.quatropdois.selfieSwap;
 
-import com.example.foto_rosto.R;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.quatropdois.selfieSwap.R;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class NarizActivity extends Activity {
+public class BocaActivity extends Activity {
 
-	private int nariz = 0;
-	private int rosto = 2;
+	private int boca = 0;
+	private int rosto = 3;
     private Intent cameraActivity;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_nariz);
+		setContentView(R.layout.activity_boca);
 		init();
 	}
 	
 	private void init(){
-		
+
 		AdView adView = (AdView) findViewById(R.id.adView);
 	    AdRequest adRequest = new AdRequest.Builder()
        .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
 	        .build();
 	    adView.loadAd(adRequest);	
+		
 	    
 		cameraActivity = new Intent(getApplicationContext(), CameraActivity.class);
 		
 	}
 	
-	public void selectNariz(View view){
+	public void selectBoca(View view){
 		
 		switch (view.getId()) {
 		
-		case R.id.BtnNariz1:
+		case R.id.BtnBoca1:
 			
-			nariz = 1;
+			boca = 1;
 			mudatela();
 			
 			break;
 			
-		case R.id.BtnNariz2:
+		case R.id.BtnBoca2:
 			
-			nariz = 2;
+			boca = 2;
 			mudatela();
 				
 			break;
 			
-		case R.id.BtnNariz3:
+		case R.id.BtnBoca3:
 			
-			nariz = 3;
+			boca = 3;
 			mudatela();
 			
 			break;
 		
-		case R.id.BtnNariz4:
+		case R.id.BtnBoca4:
 			
-			nariz = 4;
+			boca = 4;
 			mudatela();
 			
 			break;
 		
-		case R.id.BtnNariz5:
+		case R.id.BtnBoca5:
 			
-			nariz = 5;
+			boca = 5;
 			mudatela();
 			
 			break;
 		
-		case R.id.BtnNariz6:
+		case R.id.BtnBoca6:
 			
-			nariz = 6;
+			boca = 6;
 			mudatela();
 			
 			break;
 		
-		case R.id.BtnNariz7:
+		case R.id.BtnBoca7:
 			
-			nariz = 7;
+			boca = 7;
 			mudatela();
 			
 			break;
+		
+		case R.id.BtnBoca8:
 			
-		case R.id.BtnNariz9:
-			
-			nariz = 9;
-			mudatela();
-			
-			break;		
-			
-		case R.id.BtnNariz10:
-			
-			nariz = 10;
+			boca = 8;
 			mudatela();
 			
 			break;
+
+		case R.id.BtnBoca9:
 			
-		case R.id.BtnNariz11:
-			
-			nariz = 11;
+			boca = 9;
 			mudatela();
 			
-			break;		
+			break;
+
+		case R.id.BtnBoca10:
 			
-		case R.id.BtnNariz12:
-			
-			nariz = 12;
+			boca = 10;
 			mudatela();
 			
-			break;		
+			break;
+
+		case R.id.BtnBoca11:
 			
-		case R.id.BtnNariz13:
-			
-			nariz = 13;
+			boca = 11;
 			mudatela();
 			
-			break;		
+			break;
+
+		case R.id.BtnBoca12:
 			
-		case R.id.BtnNariz14:
-			
-			nariz = 14;
+			boca = 12;
 			mudatela();
 			
-			break;		
+			break;
+
+		case R.id.BtnBoca13:
 			
-		case R.id.BtnNariz15:
-			
-			nariz = 15;
+			boca = 13;
 			mudatela();
 			
-			break;		
+			break;
+
+		case R.id.BtnBoca14:
 			
-		case R.id.BtnNariz16:
-			
-			nariz = 16;
+			boca = 14;
 			mudatela();
 			
-			break;		
+			break;
+
+		case R.id.BtnBoca15:
 			
-		case R.id.BtnNariz17:
-			
-			nariz = 17;
+			boca = 15;
 			mudatela();
 			
-			break;		
+			break;
+
+		case R.id.BtnBoca16:
 			
-		case R.id.BtnNariz18:
-			
-			nariz = 18;
+			boca = 16;
 			mudatela();
 			
-			break;		
+			break;
+
+		case R.id.BtnBoca17:
 			
-		case R.id.BtnNariz19:
-			
-			nariz = 19;
+			boca = 17;
 			mudatela();
 			
-			break;		
+			break;
+
+		case R.id.BtnBoca18:
 			
-		case R.id.BtnNariz20:
+			boca = 18;
+			mudatela();
 			
-			nariz = 20;
+			break;
+
+		case R.id.BtnBoca19:
+			
+			boca = 19;
+			mudatela();
+			
+			break;
+
+		case R.id.BtnBoca20:
+			
+			boca = 20;
+			mudatela();
+			
+			break;
+
+		case R.id.BtnBoca21:
+			
+			boca = 21;
 			mudatela();
 			
 			break;	
+
+		case R.id.BtnBoca22:
 			
-		case R.id.BtnNariz21:
-			
-			nariz = 21;
+			boca = 22;
 			mudatela();
 			
 			break;	
+
+		case R.id.BtnBoca23:
 			
-		case R.id.BtnNariz22:
-			
-			nariz = 22;
+			boca = 23;
 			mudatela();
 			
 			break;	
+
+		case R.id.BtnBoca24:
 			
-		case R.id.BtnNariz23:
-			
-			nariz = 23;
+			boca = 24;
 			mudatela();
 			
-			break;	
+			break;				
 			
-		case R.id.BtnNariz24:
-			
-			nariz = 24;
-			mudatela();
-			
-			break;					
 
 		default:
 			break;
@@ -207,13 +216,13 @@ public class NarizActivity extends Activity {
 	private void mudatela(){
 
 	    cameraActivity.putExtra("Rosto", rosto);
-    	cameraActivity.putExtra("img_n", nariz);
+    	cameraActivity.putExtra("img_n", boca);
 		startActivity(cameraActivity);
 		
 	}
 
-     public void onBackPressed(){
-        NarizActivity.this.finish();
+    public void onBackPressed(){
+        BocaActivity.this.finish();
         android.os.Process.killProcess(android.os.Process.myPid());
         System.exit(0);
         getParent().finish();

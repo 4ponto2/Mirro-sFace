@@ -3,7 +3,7 @@
     xmlns:ads="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.quatropdois.foto_rosto.OlhosActivity" 
+    tools:context="com.quatropdois.selfieSwap.OlhosActivity" 
     android:background="@drawable/bg">
     
     <com.google.android.gms.ads.AdView

@@ -1,4 +1,4 @@
-package com.quatropdois.foto_rosto;
+package com.quatropdois.selfieSwap;
 
 import android.content.Context;
 import android.graphics.Typeface;

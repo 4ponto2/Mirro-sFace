@@ -36,7 +36,7 @@
 <!--             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" /> -->
         
         <activity
-            android:name="com.quatropdois.foto_rosto.Splash4p2_activity"
+            android:name="com.quatropdois.selfieSwap.Splash4p2_activity"
             android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -45,44 +45,45 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.quatropdois.foto_rosto.MainActivity"
+            android:name="com.quatropdois.selfieSwap.MainActivity"
             android:label="@string/app_name"
-            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
+            android:screenOrientation="portrait" >
         </activity>
         
         <activity
-            android:name="com.quatropdois.foto_rosto.CameraActivity"
+            android:name="com.quatropdois.selfieSwap.CameraActivity"
             android:label="@string/title_activity_camera"
             android:screenOrientation="landscape"
             android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
         </activity>
-        
+<!--         android:screenOrientation="sensorLandscape" -->
         <activity
-            android:name="com.quatropdois.foto_rosto.ShareActivity"
+            android:name="com.quatropdois.selfieSwap.ShareActivity"
             android:label="@string/title_activity_share"
             android:theme="@android:style/Theme.DeviceDefault" >
         </activity>
         
         <activity
-            android:name="com.quatropdois.foto_rosto.OlhosActivity"
+            android:name="com.quatropdois.selfieSwap.OlhosActivity"
             android:label="@string/title_activity_olhos"
             android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
         </activity>
         
         <activity
-            android:name="com.quatropdois.foto_rosto.NarizActivity"
+            android:name="com.quatropdois.selfieSwap.NarizActivity"
             android:label="@string/title_activity_nariz"
             android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
         </activity>
         
         <activity
-            android:name="com.quatropdois.foto_rosto.BocaActivity"
+            android:name="com.quatropdois.selfieSwap.BocaActivity"
             android:label="@string/title_activity_boca"
             android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
         </activity>
         
         <activity
-            android:name="com.quatropdois.foto_rosto.ActivityPhotoEdit"
+            android:name="com.quatropdois.selfieSwap.ActivityPhotoEdit"
             android:label="@string/title_activity_boca"
             android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
         </activity>
@@ -94,9 +95,10 @@
         </activity>
         
         <activity
-            android:name="com.quatropdois.foto_rosto.Splash_selfieSwapActivity"
+            android:name="com.quatropdois.selfieSwap.Splash_selfieSwapActivity"
             android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
-            android:label="@string/title_activity_splash_selfie_swap" >
+            android:label="@string/title_activity_splash_selfie_swap"
+            android:screenOrientation="portrait" >
         </activity>
         
         

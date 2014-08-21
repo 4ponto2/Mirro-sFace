@@ -33,13 +33,13 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.concurrent.CountDownLatch;
 
-import com.example.foto_rosto.R;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
-import com.quatropdois.foto_rosto.ActivityPhotoEdit;
-import com.quatropdois.foto_rosto.CameraActivity;
-import com.quatropdois.foto_rosto.MainActivity;
-import com.quatropdois.foto_rosto.ShareActivity;
+import com.quatropdois.selfieSwap.ActivityPhotoEdit;
+import com.quatropdois.selfieSwap.CameraActivity;
+import com.quatropdois.selfieSwap.MainActivity;
+import com.quatropdois.selfieSwap.R;
+import com.quatropdois.selfieSwap.ShareActivity;
 
 import android.app.ProgressDialog;
 import android.content.ContentResolver;

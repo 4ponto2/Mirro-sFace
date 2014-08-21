@@ -1,4 +1,4 @@
-package com.quatropdois.foto_rosto;
+package com.quatropdois.selfieSwap;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -7,17 +7,17 @@ import java.io.IOException;
 import java.lang.ref.WeakReference;
 import java.text.SimpleDateFormat;
 
-import com.example.foto_rosto.R;
-import com.quatropdois.foto_rosto.ShareActivity.BitmapWorkerTask;
+import com.quatropdois.selfieSwap.R;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
-import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -177,13 +177,35 @@ public class CameraActivity extends Activity {
 	    protected void onResume() {
 				super.onResume();
 				progressBar.setVisibility(View.INVISIBLE);
+//				mostraMsg();
 		}
-		
+
+	    private void mostraMsg(){
+
+					// Creating alert Dialog with one Button
+
+        	AlertDialog.Builder builder1 = new AlertDialog.Builder(CameraActivity.this);
+        	builder1.setTitle("Title");
+        	builder1.setMessage("my message");
+        	builder1.setCancelable(true);
+        	builder1.setNeutralButton(android.R.string.ok,
+        	        new DialogInterface.OnClickListener() {
+        	    public void onClick(DialogInterface dialog, int id) {
+        	        dialog.cancel();
+        	    }
+        	});
+
+        	AlertDialog alert11 = builder1.create();
+        	alert11.show();
+
+	    }
+	    
 	    private void TirarFoto(){
 //		    	mCamera.takePicture(null, null, mPicture);
 		        mCamera.takePicture(shutterCallback, null, mPicture);        
 		}
 		
+	    
 	    ShutterCallback shutterCallback = new ShutterCallback() {
 	    	public void onShutter() {
 	    		Log.d("FOTO", "onShutter'd");

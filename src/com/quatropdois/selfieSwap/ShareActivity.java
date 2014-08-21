@@ -1,4 +1,4 @@
-package com.quatropdois.foto_rosto;
+package com.quatropdois.selfieSwap;
 
 import java.io.BufferedOutputStream;
 import java.io.File;
@@ -7,7 +7,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.lang.ref.WeakReference;
 
-import com.example.foto_rosto.R;
+import com.quatropdois.selfieSwap.R;
 
 import android.app.Activity;
 import android.app.ProgressDialog;

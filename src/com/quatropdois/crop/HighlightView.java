@@ -16,7 +16,8 @@
 
 package com.quatropdois.crop;
 
-import com.example.foto_rosto.R;
+import com.quatropdois.selfieSwap.R;
+
 import android.graphics.Canvas;
 import android.graphics.Matrix;
 import android.graphics.Paint;

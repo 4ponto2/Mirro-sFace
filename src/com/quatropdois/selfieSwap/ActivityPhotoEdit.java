@@ -1,4 +1,4 @@
-package com.quatropdois.foto_rosto;
+package com.quatropdois.selfieSwap;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -6,10 +6,11 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.example.foto_rosto.R;
+import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
-import com.quatropdois.crop.CropImage;
+import com.google.android.gms.ads.InterstitialAd;
+import com.quatropdois.selfieSwap.R;
 
 import android.app.Dialog;
 import android.content.Intent;
@@ -36,6 +37,7 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.SeekBar;
+import android.widget.Toast;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView;
 
@@ -54,19 +56,61 @@ public class ActivityPhotoEdit extends MyActivity{
 	private static final int SHARE_REQUEST = 1;
 	boolean shareDialogCreated = false;
 	boolean photoSet = false;
+	private boolean wasExecuted = false;
 	
 	private String localFoto;
 	
+	private static final String AD_UNIT_ID = "ca-app-pub-8073268566643671/8968462340";
+	private static final String LOG_TAG = "InterstitialSample";
+	
+	private InterstitialAd interstitialAd;
+	
+	private Intent main;
 	
 	@Override
 	public void onCreate(Bundle savedInstanceBundle) {
 		super.onCreate(savedInstanceBundle);
+		
+	    interstitialAd = new InterstitialAd(this);
+	    interstitialAd.setAdUnitId(AD_UNIT_ID);
+		
 		super.initialize(R.layout.activity_photo_edit, "COMPARTILHE",
 			R.id.ShareTitleBar);
 		
     	setAdMob();
+		setInterstatial();
 		setPhoto();
 		setTools();
+	}
+	
+	private void setInterstatial(){
+        AdRequest adRequest = new AdRequest.Builder()
+        .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
+        .addTestDevice("INSERT_YOUR_HASHED_DEVICE_ID_HERE")
+        .build();
+
+	    // Load the interstitial ad.
+	    interstitialAd.loadAd(adRequest);
+	    
+	 // Set the AdListener.
+	    interstitialAd.setAdListener(new AdListener() {
+	      @Override
+	      
+	      public void onAdClosed(){
+	    	  Log.i("teste", "FECHAR");
+	    	  if(!wasExecuted){
+	      	    wasExecuted = true;
+	      		startActivity(main);
+	          }
+	    	  System.exit(0);
+	      };
+
+	      @Override
+	      public void onAdFailedToLoad(int errorCode) {
+	        Log.d(LOG_TAG, "ERRO");
+	        Toast.makeText(ActivityPhotoEdit.this, "ERRO", Toast.LENGTH_SHORT).show();
+	      }
+	    });	    
 	}
 	
 	private void setAdMob(){
@@ -105,6 +149,8 @@ public class ActivityPhotoEdit extends MyActivity{
 	} 	
 	
 	private void setTools(){
+		
+		main = new Intent(getApplicationContext(), MainActivity.class);
 		
 		// Set the saturation bar
 		sbSaturation = (SeekBar)findViewById(R.id.sbSaturation);
@@ -163,6 +209,14 @@ public class ActivityPhotoEdit extends MyActivity{
 	        e.printStackTrace();
 	    }
 	}
+	
+	public void showInterstitial() {
+	    if (interstitialAd.isLoaded()) {
+	      interstitialAd.show();
+	    } else {
+	      Log.d(LOG_TAG, "Interstitial ad was not ready to be shown.");
+	    }
+	  }
 	
 	// Creates custom share dialog for image sharing INSTEAD of chooser
 	// Might make custom implementation for Facebook and Instagram since
@@ -246,12 +300,17 @@ public class ActivityPhotoEdit extends MyActivity{
 		onBackPressed();
 	}
 	
-    public void onBackPressed(){
-        ActivityPhotoEdit.this.finish();
-        android.os.Process.killProcess(android.os.Process.myPid());
-        System.exit(0);
-        getParent().finish();
-    }
+//    public void onBackPressed(){
+//        ActivityPhotoEdit.this.finish();
+//        android.os.Process.killProcess(android.os.Process.myPid());
+//        System.exit(0);
+//        getParent().finish();
+//    }
+    
+    public void onBackPressed()
+    {
+    	showInterstitial();
+    }    
 	
 	public void onShare(View v){
 		shareDialog.show();

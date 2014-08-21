@@ -1,4 +1,4 @@
-package com.quatropdois.foto_rosto;
+package com.quatropdois.selfieSwap;
 
 
 import java.io.BufferedOutputStream;
@@ -7,7 +7,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-import com.example.foto_rosto.R;
+import com.quatropdois.selfieSwap.R;
 
 import android.content.Context;
 import android.content.ContextWrapper;
@@ -65,8 +65,8 @@ public class MyActivity extends FragmentActivity{
 	private void setActionBar(String title, int id) {
 		lTitleBar = findViewById(id);
 		if(title != null){
-			com.quatropdois.foto_rosto.MyTextView tvTitle = 
-				(com.quatropdois.foto_rosto.MyTextView)lTitleBar.findViewById(R.id.tvTitle);
+			com.quatropdois.selfieSwap.MyTextView tvTitle = 
+				(com.quatropdois.selfieSwap.MyTextView)lTitleBar.findViewById(R.id.tvTitle);
 			tvTitle.setText(title);
 		}
 	}
