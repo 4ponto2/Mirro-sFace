@@ -19,6 +19,7 @@ import android.os.Handler;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.PixelFormat;
@@ -29,6 +30,7 @@ import android.provider.Settings;
 import android.provider.Settings.SettingNotFoundException;
 import android.util.Log;
 import android.view.KeyEvent;
+import android.view.Surface;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -36,6 +38,7 @@ import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 public class CameraActivity extends Activity {
 
@@ -121,8 +124,8 @@ public class CameraActivity extends Activity {
 				 int uiOptions = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
 				               | View.SYSTEM_UI_FLAG_FULLSCREEN;
 				 decorView.setSystemUiVisibility(uiOptions);
-		        
-		        
+
+
 //		      progressBar.bringToFront();
 		        
 		        try {
@@ -177,8 +180,12 @@ public class CameraActivity extends Activity {
 	    protected void onResume() {
 				super.onResume();
 				progressBar.setVisibility(View.INVISIBLE);
+				Log.i("rotation", "rotation:" + getResources().getConfiguration().orientation);
 //				mostraMsg();
 		}
+
+
+
 
 	    private void mostraMsg(){
 

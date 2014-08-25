@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.foto_rosto"
-    android:versionCode="1"
-    android:versionName="1.0" >
+    package="com.quatropdois.selfieSwap"
+    android:versionCode="2"
+    android:versionName="1" >
 
     <uses-sdk
         android:minSdkVersion="14"
@@ -54,8 +54,9 @@
         <activity
             android:name="com.quatropdois.selfieSwap.CameraActivity"
             android:label="@string/title_activity_camera"
-            android:screenOrientation="landscape"
-            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
+            android:screenOrientation="sensorLandscape"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" 
+            android:configChanges="orientation|keyboardHidden">
         </activity>
 <!--         android:screenOrientation="sensorLandscape" -->
         <activity
